@@ -1,0 +1,72 @@
+# baseURL: 'https://blog.summittdweller.com/'
+# baseURL: '/'
+canonifyURLs: true
+languageCode: en-us
+title: Personal Blog
+theme: internet-weblog
+enableEmoji: true
+pygmentsstyle: emacs
+pagination.pagerSize: 25
+SectionPagesMenu: main
+# googleAnalytics: UA-146526628-2   MAM removed 12-Mar-2023
+EnableGitInfo: false
+params:
+  Author:
+    Handle: Summitt Dweller
+    FirstName: Mark
+    LastName: McFate
+    Location: 'Toledo, Iowa'
+    FlickrID: 97761917@N02
+  Description: >-
+    Personal weblog of web professional, geocacher, camper, and volunteer, Mark
+    McFate.
+  ShowCopyright: true
+  RSSEnabled: true
+  RSSSections:
+    - Posts
+    - Microposts
+    - Hikes
+    - Photos
+  RSSMicropostTitles: false
+  showGists: true
+  dropboxURL: 'https://dl.dropboxusercontent.com/s/6bfw16wyq8zn8vc/javascript-test.md?dl=0'
+  maps: true
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+menu:
+  main:
+    - name: Microposts
+      weight: 10
+      identifier: microposts
+      url: /microposts/
+    - name: Posts
+      weight: 20
+      identifier: posts
+      url: /posts/
+    - name: Photos
+      weight: 40
+      identifier: photos
+      url: /photos/
+    - name: OneTabs
+      weight: 50
+      identifier: onetabs
+      url: /onetabs/
+markup:
+  goldmark: 
+    renderer:
+      unsafe: true
+
+ignoreLogs: warning-goldmark-raw-html
+
+## Temporarily removing this until DO has their build issue fixed
+# module:
+#   imports:
+#     - path: github.com/SummittDweller/hugo-timeline
+#       mounts:
+#       - source: layouts
+#         target: layouts
+#       - source: static
+#         target: static
+ 

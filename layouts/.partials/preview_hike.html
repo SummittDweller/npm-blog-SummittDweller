@@ -1,0 +1,17 @@
+<article class="post">
+  <h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+  <div class="postmeta">Posted on <time datetime="{{ .Date }}" pubdate="">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ if .Params.location }}
+      from {{ .Params.location }}
+    {{ end }}
+    {{ if (isset .Params "categories") }}
+      <span class="categories">
+        {{ range $i, $v := .Params.categories }}
+          <a class="category" href="/categories/{{ $v | urlize }}">{{ $v }}</a>{{ if ne (len $.Params.categories) (add $i 1) }}, {{ end }}
+        {{ end }}
+      </span>
+    {{ end }}
+  </div>
+
+</article>

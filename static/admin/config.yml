@@ -1,0 +1,61 @@
+backend:
+  name: github
+  repo: SummittDweller/blogs-SummittDweller
+  branch: main 
+
+media_folder: 'static/img'
+public_folder: /img
+
+collections:
+  - name: 'posts'
+    label: 'Post'
+    folder: 'content/posts'
+    create: true
+    slug: '{{slug}}'
+    path: '{{year}}/{{month}}/{{slug}}'
+    preview_path: '{{year}}/{{month}}/{{slug}}'
+    preview_path_date_field: publishDate
+    sortable_fields: [ 'publishDate', 'lastmod' ]
+    sort: 'publishDate:desc'
+    view_groups:
+      - label: Year
+        field: publishDate
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
+    editor:
+      preview: true
+    fields:
+      - label: Title
+        name: title
+      - label: Body
+        name: body
+        widget: markdown 
+      - label: Publish Date
+        name: publishDate
+        widget: date      
+      - label: Last Mod
+        name: lastmod
+        widget: datetime
+      - label: Location
+        name: location
+        default: 'Toledo, IA'
+        required: false
+      - label: Weight
+        name: weight
+        height: "Enter today's date with a leading dash, like -YYYYMMDD."
+        required: true
+        # default: -{{year}}{{month}}{{day}}
+      - label: Draft Status
+        name: draft
+        widget: boolean
+        default: false 
+      - label: Description
+        name: description
+        required: false
+      - label: Tags
+        name: tags
+        widget: list
+        hint: 'Enter comma separated values.'
+        required: false

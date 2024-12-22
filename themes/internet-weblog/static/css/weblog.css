@@ -1,0 +1,399 @@
+/* @import url(./joshin-color-palette.css);
+@import url(./joshin-color-light.css);
+@import url(./joshin-color-dark.css); */
+
+/* Page */
+
+body {
+  font: 16px/24px "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  background-color: var(--joshin-elevation-0);
+}
+
+a[href] {
+	color: var(--joshin-component-link-color-default);
+	text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  color: var(--joshin-primary-color-500);  
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  background-color: var(--joshin-elevation-1);
+  color: var(--joshin-primary-color-500);
+  padding: 5px;
+}
+
+blockquote p {
+  font-style: italic;
+  padding: 0 10px;
+}
+
+blockquote p:last-child {
+  font-style: normal;
+  padding-left: 30px;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Header */
+
+header {
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: left;
+  vertical-align: middle;
+  font-size: 30px;
+  line-height: 32px;
+  margin: 0 auto;
+  padding: 10px 10px 0 10px;
+  max-width: 720px;
+  color: var(--joshin-primary-color-400);
+}
+
+article > ul > li {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--joshin-primary-color-500);
+}
+
+/* Navigation */
+
+nav {
+  margin: auto;
+  max-width: 720px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+nav ul > li {
+  display: inline;
+  float: left;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11pt;
+  font-weight: 500;
+}
+
+.rss-icon {
+  height: 14px;
+  padding-left: 5px;
+}
+
+.pagination {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.pagination span {
+  color: var(--joshin-secondary-color-500);
+}
+
+/* Articles, general */
+
+.post, .page, .post-groups {
+  margin: 40px auto;
+  max-width: 780px;
+}
+
+.post > p, .page > p {
+  color: var(--joshin-primary-color-500);
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  text-align: justify;
+}
+
+.post > p {
+  margin: 20px auto;
+}
+
+.post h2 {
+  margin: 0;
+  line-height: 32px;
+}
+
+article .postmeta {
+	line-height: 22px;
+	color: var(--joshin-primary-color-400);
+  margin: 0 auto;
+	padding: 5px 0 0 0;
+}
+
+/* Microposts */
+
+article.micropost {
+  margin: 8px auto;
+}
+
+.micropost {
+  background-color: var(--joshin-elevation-1);
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 780px;
+  border-radius: 14px;
+}
+
+.micropost > p {
+  color: var(--joshin-primary-color-700);
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 10px;
+  text-align: justify;
+}
+
+.micropost > a {
+  font-size: 12px;
+  color: var(--joshin-primary-color-400);
+  margin: 0;
+}
+
+.micropost p > a, .post p > a {
+  text-decoration: underline; 
+}
+
+/* Photo Posts */
+
+article.photo {
+  border-radius: 14px;
+  margin: 40px auto;
+  max-width: 780px;
+  overflow: hidden;
+  height: 300px;
+}
+
+article.photo div {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+}
+
+article.photo .title {
+  background-color: var(--joshin-accent-color-100);
+  font-size: 18pt;
+  padding: 15px;
+}
+
+article.photo a {
+  color: var(--joshin-primary-color-100);
+  display: block;
+  overflow: hidden;
+}
+
+article.photo p {
+  margin: 0;
+}
+
+article.photo img {
+  -webkit-transition: -webkit-transform 4s ease 0s;
+  -moz-transition: -moz-transform 4s ease 0s;
+  -o-transition: -o-transform 4s ease 0s;
+  transition: transform 4s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  width: 100%;
+}
+
+article.photo img:hover {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);
+  transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);
+}
+
+/* Post Grouping */
+
+.post-group {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+.post-group-item {
+  flex: auto;
+  width: 45%;
+  margin: 5px;
+  padding: 8px;
+  font-size: 10pt;
+  border-radius: 14px;
+  color: var(--joshin-primary-color-600);
+}
+
+.post-group-item:hover {
+  background-color: var(--joshin-elevation-1);
+}
+
+.post-group-item h3 {
+  color: var(--joshin-primary-color-400);
+  font-size: 15pt;
+  margin: 0;
+  padding: 6px 0 0 6px;
+  font-weight: bold;
+}
+
+.post-group-item ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 6px;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--joshin-elevation-3);
+  color: var(--joshin-primary-color-200);
+  margin: 0;
+}
+
+.footer_text {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 720px;
+}
+
+.footer_text h3 {
+  color: var(--joshin-primary-color-200);
+}
+
+.footer_text a {
+  color: var(--joshin-primary-color-60);
+}
+
+.footer_text > div {
+  flex: 1;
+  margin: 10px;
+}
+
+#photos {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.photo-item {
+  display: block;
+  height: 75px;
+  margin: 1px;
+  overflow: hidden;
+  padding: 0;
+  width: 75px;
+}
+
+.photo-item img {
+  flex: auto;
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.photo-item img:hover {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+  opacity: 1.0;
+}
+
+.footer_copyright {
+  color: var(--joshin-primary-color-50);
+  font: 12px/20px "Avenir Next", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer_copyright a {
+  color: var(--joshin-primary-color-60);
+}
+
+@media screen
+and (max-width: 780px) {
+
+  .footer_text {
+    width: 100%;
+  }
+
+  .footer_text > div {
+    flex: auto;
+    width: 100%;
+    text-align: justify;
+  }
+
+  #photos {
+    justify-content: center;
+  }
+
+  article {
+    margin: 0;
+    padding: 20px;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul > li {
+    background-color: var(--joshin-elevation-2);
+    display:list-item;
+    float: none;
+    margin: 0;
+    padding: 10px;
+    border-bottom: var(--joshin-elevation-1) 2px solid;
+  }
+
+  nav ul:first-child {
+    border-top: var(--joshin-elevation-1) 2px solid;
+  }
+
+  .post-group-item {
+    width: 100%;
+  }
+
+  article.micropost {
+    margin: 8px 20px;
+  }
+
+  .micropost {
+    margin: 0px auto;
+    padding: 20px;
+  }
+}

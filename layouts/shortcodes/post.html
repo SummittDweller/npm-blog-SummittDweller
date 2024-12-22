@@ -1,0 +1,12 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/shortcodes/post.html -->` | safeHTML }}
+{{ $_hugo_config := `{ "version": 1 }` }}
+<article class="post">
+  <h2><a href="{{ index .Params 1 }}" rel="full-article">{{ index .Params 0 }}</a></h2>
+  <div class="postmeta">
+    Posted on {{ dateFormat "2006/01/02 3:04 PM" (index .Params 2) }}
+    {{ if (index .Params 3) }}
+      from {{ index .Params 3 }}
+    {{ end }}
+  </div>
+</article>
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/shortcodes/post.html -->` | safeHTML }}

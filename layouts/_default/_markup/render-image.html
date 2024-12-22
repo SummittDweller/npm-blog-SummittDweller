@@ -1,0 +1,6 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/_default/_markup/render-image.html -->` | safeHTML }}
+<figure>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+  <figcaption>{{ .Title }}</figcaption>
+</figure>
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/_default/_markup/render-image.html -->` | safeHTML }}

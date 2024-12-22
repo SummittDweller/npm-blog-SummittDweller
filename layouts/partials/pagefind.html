@@ -1,0 +1,14 @@
+    <!-- Implemeting the Pagefind UI per https://pagefind.app/docs/ui/ -->
+    {{ `<!-- hugo: layouts/partials/pagefind.html -->` | safeHTML }}
+
+    <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+    
+    <div id="search" class="fixed-top-two"></div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search" });
+        });
+    </script>
+    {{ `<!-- /hugo: layouts/partials/pagefind.html -->` | safeHTML }}
+

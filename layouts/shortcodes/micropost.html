@@ -1,0 +1,11 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/shortcodes/micropost.html -->` | safeHTML }}
+{{ $_hugo_config := `{ "version": 1 }` }}
+<article class="micropost"><p>
+  {{ .Inner | markdownify }}
+  <aside class="postmeta">→ {{ dateFormat "2006/01/02 3:04 PM" (index .Params 0) }}
+    {{ if index .Params 1 }}
+      posted from {{ index .Params 1 }}
+    {{ end }}
+  </aside>
+</p></article>
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/shortcodes/micropost.html -->` | safeHTML }}

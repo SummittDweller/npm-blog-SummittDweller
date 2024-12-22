@@ -1,0 +1,46 @@
+Hello Mark,
+
+Thank you for getting back to us and for your patience!
+
+I understand your concern and here to help. Firstly, I want to confirm that it's supported and you should be able to configure it in the App Platform. I reviewed your repo at "SummittDweller/wieting-theatre" and found that you have not configured the OAuth base_url in the config.yml file at 
+https://github.com/SummittDweller/wieting-theatre/tree/main/static/admin
+
+For testing purpose, I have forked your repo and deployed in my test account. I referred to the following article to deploy this test app:
+http://www.vxk.cz/tips/2017/05/18/netlify-cms/
+
+I have successfully deployed and configured the OAuth service in the test account. Here is the app  and OAuth link:
+https://wieting-theatre-uf7ko.ondigitalocean.app/admin/ 
+ https://netlifycms-auth-prbel.ondigitalocean.app
+
+Please note that I will completely delete the repo and test app from my test account after this ticket is resolved. Just for your reference, I'm keeping this app active for now. 
+
+Step 1: From the external client list [1], I have deployed the Node.js OAuth external client from that repo [2] listed on that website [1]. While deploying it on App Platform please set the following env variable for deployment to succeed:
+KEYS: ORIGIN
+VALUES: .*.ondigitalocean.app
+
+KEYS: NODE_ENV
+VALUES: production
+
+Step 2: Create OAuth app in GitHub settings and set the Authorisation callback URL for OAuth. Please follow the documentation mentioned in [3]. You have to set the Home URL as the APP URL from Step 1 and Callback_URL as APP_URL/callback.
+
+Homepage URL: https://netlifycms-auth-prbel.ondigitalocean.app
+Authorization callback URL: https://netlifycms-auth-prbel.ondigitalocean.app/callback
+
+Step 3: Once you have deployed both the apps (main app and OAuth service) then you have to link it by updating the configuration file "config.yml" present at [4]. You have to update the base_url to APP_URL from Step 1. You have refer to my forked repo configuration file at [5].
+
+[1] https://www.netlifycms.org/docs/external-oauth-clients/
+[2] https://github.com/vencax/netlify-cms-github-oauth-provider
+[3] https://docs.github.com/en/developers/apps/creating-an-oauth-app 
+[4] https://github.com/SummittDweller/wieting-theatre/tree/main/static/admin 
+[5] https://github.com/dikshithshetty/wieting-theatre/blob/main/static/admin/config.yml 
+
+Please let us know if you have any additional questions, and have a wonderful day!
+
+Cheers,
+
+Dikshith
+Senior Developer Support Engineer
+Need a fast resolution? Search our Q&A:
+https://www.digitalocean.com/community/questions
+
+ref:_00Df218t5m._5004P1L3Zhf:ref

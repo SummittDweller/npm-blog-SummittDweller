@@ -1,0 +1,60 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/_default/testpage.html -->` | safeHTML }}
+{{ partial "site_header.html" . }}
+{{ partial "page_header.html" . }}
+
+<section class="post">
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+</section>
+
+<!-- <script>alert("From index.html before my stuff is loaded!");</script> -->
+
+{{ partial "render_from_Dropbox.html" . }}
+
+<!-- <script>alert("From index.html after my script has run!");</script> -->
+
+{{ $file := "/test-announcement.md" }}
+{{ if (fileExists $file) -}}
+  <div class="announcement-card">
+    <div class="card-body">
+      <h1 class="card-title">
+        Attention!
+      </h1>
+      <div class="announcement">
+        {{ $file | readFile | markdownify }}
+      </div>
+    </div>
+  </div>
+{{- end }}
+
+{{ if .Site.Params.showGists }}
+  <div class="my-gists">
+    <ul>
+      {{ $url := "https://api.github.com/users/SummittDweller/gists" }}
+
+      {{ $data := resources.GetRemote $url }}
+      {{ $gistJ := $data | transform.Unmarshal }}
+
+      {{ range first 10 $gistJ }}
+        {{ if .public }}
+          <li><a href="{{ .html_url }}" target="_blank">
+            {{ .description }}
+          </a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+{{- end }}
+
+<div class="timeline-card">
+  <a class="twitter-timeline" data-tweet-limit="1" href="https://twitter.com/SummittDweller?ref_src=twsrc%5Etfw">Tweets by SummittDweller</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div class="timeline-card">
+  <a href="https://twitter.com/SummittDweller">The Twitter widget displayed above shows only my latest Tweet. To view additional tweets click this text or the "View on Twitter" link above.</a>
+</div>
+
+<p></p>
+
+{{ partial "page_footer.html" . }}
+{{ partial "site_footer.html" . }}
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/_default/testpage.html -->` | safeHTML }}

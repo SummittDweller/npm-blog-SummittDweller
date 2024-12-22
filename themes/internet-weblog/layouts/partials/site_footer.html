@@ -1,0 +1,10 @@
+{{ `<!-- hugo: blogs-SummittDweller/themes/internet-weblog/layouts/partials/site_footer.html -->` | safeHTML }}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="{{.Site.BaseURL}}lightbox2-2.11.4/js/lightbox.min.js" charset="utf-8"></script>
+    <script src="{{.Site.BaseURL}}js/weblog.js" charset="utf-8"></script>
+    {{ partial "custom_javascript.html" . }}
+    {{ partial "custom_image_handler.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
+  </body>
+</html>
+{{ `<!-- /hugo: blogs-SummittDweller/themes/internet-weblog/layouts/partials/site_footer.html -->` | safeHTML }}

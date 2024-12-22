@@ -1,0 +1,167 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/partials/hugo-timeline-li-event.html -->` | safeHTML }}
+{{ partial "console-log" "--- Start of hugo-timeline-li-event.html partial ---" }}
+{{ $now := now.Unix }}   {{/* Returns current number of seconds since the Unix epoch */}}
+{{ $msg := "" }}
+{{ $discrete := "" }}
+
+{{/* ---------- Fetch partial parameters from dict ---------- */}}
+{{ $event := .event }}
+{{ $pxPerMonth := .pxPerMonth }}
+{{ $topUnix := .topUnix }}   {{/* top of the timeline as Unix (Epoch) seconds */}}
+{{ $botUnix := .botUnix }}   {{/* bottom of the timeline as Unix (Epoch) seconds */}}
+{{ $minEventHeight := .minEventHeight }}   {{/* minimum event height in pixels from front matter */}}
+{{ partial "console-log" (dict "$event.name" $event.name) }}
+{{ partial "console-log" . }}
+
+{{/* ---------- Constants -- */}}
+{{/* $minEventHeight := 40 */}}
+{{ $secondsPerMonth := 2628288.0 }}
+{{/* 60 * 60 * 24 * 30.42. It must be be a float (end with .0) so div doesn't floor the result */}}
+
+{{/* ---------- Offset from top because we always draw a full year --- */}}
+{{/* $curMonth := int (printf "%d" now.Month) */}}
+{{/* $monthOffset := sub 12 $curMonth */}} 
+
+{{/* partial "console-log" (dict "$curMonth" $curMonth) */}}
+{{/* partial "console-log" (dict "SmonthOffset" $monthOffset) */}}  
+
+{{/* ---------- Default values for to and from --- */}}
+{{ $to := $topUnix }}
+{{ $from := $botUnix }}
+
+{{/* A discrete event (no duration) has NO .event.from, only .event.to, and its size will be 1/4 of a month */}}
+{{ with $event }}
+  {{ if index . "to" }}
+    {{ $to = ($event.to | time).Unix }}  {{/* event date as a 'time' package object */}}
+  {{ end }}
+  {{ if index . "from" }}
+    {{ $from = ($event.from | time).Unix }}
+  {{ else }}
+    {{ $secondsPerQuarter := div $secondsPerMonth 4 }}
+    {{ $from = sub $to $secondsPerQuarter }}  
+    {{ $discrete = "discrete"}}
+  {{ end }}
+{{ end }}  
+
+{{ partial "console-log" (dict "$to" $to) }}
+{{ partial "console-log" (dict "$from" $from) }}
+
+{{/* ---------------------------------------- Set display strings --- */}}
+{{ $toDateDisplay := (time $to).Format "Jan 2006" }}
+{{ partial "console-log" (dict "$toDateDisplay" $toDateDisplay) }}
+
+{{ $dateDisplay := "undefined" }}
+{{ $duration := "undefined" }}
+{{ $secondsPerQuarter := div $secondsPerMonth 4 }}
+
+{{ $eventLength := add (div (sub $to $from) $secondsPerMonth) 1 }}
+{{/* plus: 1 to be inclusive. If I worked from 2016-01 to 2016-02, I should cover both months */}}
+
+{{ with $event }}
+  {{ if index . "from" }}
+    {{ $dateDisplay = printf "%s to %s" ((time $from).Format "Jan 2006") ((time $to).Format "Jan 2006") }}
+    {{ $yrs := int (math.Floor (div $eventLength 12)) }}
+    {{ $mo := int (math.Floor (mod $eventLength 12)) }}
+
+    {{ if not $yrs }}
+      {{ $duration = printf "%d mo" $mo }}
+    {{ else }}
+      {{ $duration = printf "%d yr" $yrs }}
+      {{ if ne $mo 0 }}
+        {{ $duration = printf "%s %d mo" $duration $mo }}
+      {{ end }}
+    {{ end }}
+
+    {{ partial "console-log" (dict "$yrs" $yrs) }}
+    {{ partial "console-log" (dict "$mo" $mo) }}
+
+  {{ else }}
+    {{ $dateDisplay = (time $to).Format "Jan 2 2006" }}
+    {{ $duration = "event" }}
+  {{ end }}
+
+  {{ partial "console-log" (dict "$dateDisplay" $dateDisplay) }}
+  {{ partial "console-log" (dict "$duration" $duration) }}
+
+{{ end }}  
+
+{{/* ---------- Check for event out-of-range ---------- */}}
+{{ if gt $to $topUnix }}
+  {{ $msg = printf "Warning: Event '%s' end date %s is greater than timeline end date %s." $event.name ((time $to).Format "Jan 2, 2006") (( time $topUnix).Format "Jan 2, 2006") }}
+  {{ partial "console-log" $msg }}
+  {{/*  {{ warnf "%s" $msg }}  */}}
+  {{ $to = $topUnix }}
+{{ end }}
+
+{{ if lt $from $botUnix }}
+  {{ $msg = printf "Warning: Event '%s' start date %s is less than timeline start date %s." $event.name ((time $from).Format "Jan 2, 2006") ((time $botUnix).Format "Jan 2, 2006") }}
+  {{ partial "console-log" $msg }}
+  {{/*  {{ warnf "%s" $msg }}  */}}
+  {{ $from = $botUnix }}
+{{ end }}
+
+{{ if gt $from $topUnix }}
+  {{ $msg = printf "Error: Event '%s' start date %s is greater than timeline end date %s." $event.name ((time $from).Format "Jan 2, 2006") (( time $topUnix).Format "Jan 2, 2006") }}
+  {{ partial "console-log" $msg }}
+  {{ errorf "%s" $msg }}
+{{ end }}
+
+{{ if lt $to $botUnix }}
+  {{ $msg = printf "Error: Event '%s' end date %s is less than timeline start date %s." $event.name ((time $to).Format "Jan 2, 2006") ((time $botUnix).Format "Jan 2, 2006") }}
+  {{ partial "console-log" $msg }}
+  {{ errorf "%s" $msg }}
+{{ end }}
+
+{{/* ---------- Set top position and height --- */}}
+{{/* top: topUnix - to ( / sPerMonth * pxPerMonth )  height: to - from ( / sPerMonth * pxPerMonth ) */}}
+
+{{ $eventAge := div (sub $topUnix $to) $secondsPerMonth }}
+{{ $top := mul $eventAge $pxPerMonth }}
+{{ $h := mul $eventLength $pxPerMonth }}  
+
+{{ partial "console-log" (dict "$eventAge" $eventAge) }}
+{{ partial "console-log" (dict "$top" $top) }}
+{{ partial "console-log" (dict "$eventLength" $eventLength) }}
+{{ partial "console-log" (dict "$h" $h) }}
+
+{{ $height := $h }}
+{{ if lt $h $minEventHeight }}
+  {{ $height = $minEventHeight }}
+{{ end }}  
+{{ partial "console-log" (dict "$height" $height) }}
+
+{{/* ---------- Where the rubber meets the road ---------- */}}
+<li class="event {{ $discrete -}}" tabindex="0"
+    style="top: {{- $top -}}px; height: {{- $height -}}px; min-height: {{- $height -}}px;" title="{{ $event.name }}: {{$dateDisplay}} ({{$duration}})">
+  {{ if $event.link }}
+    <div class="title"><a href="{{ $event.link | safeHTML }}" target="_blank">{{ $event.name | markdownify }}</a></div>
+  {{ else }}  
+    <div class="title">{{ $event.name | markdownify }}</div>
+  {{ end }}
+  <div class="description">{{ $event.description | markdownify }}</div>
+</li>  
+
+{{/* Original Jekyll Comment
+
+Depends on:
+* include.pxPerMonth
+* event
+
+For each event, we display name and description
+I use `from` and `to` properties to calculate top position and height
+I also use this to calculate pretty date range display phrases 
+
+*/}}
+
+{{/* Args passed in are: 
+
+  .event = Single event's data passed as "." from the page front matter
+    Components include: .name .from .to .description .link
+  .pxPerMonth = Month height in pixels calculated in the hugo-timeline shortcode
+  .topUnix = Unix epoch time represented by the top of the timeline
+  .botUnix = Unix epoch time represented by the bottom of the timeline
+  
+*/}}  
+
+{{ partial "console-log" "--- End of hugo-timeline-li-event.html ---" }}
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/partials//hugo-timeline-li-event.html -->` | safeHTML }}

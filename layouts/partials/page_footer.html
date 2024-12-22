@@ -1,0 +1,29 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/partials/page_footer.html -->` | safeHTML }}
+<footer>
+  <div class="footer_text">
+      <div>
+        <h3>Hi, <a href="{{ .Site.Params.Author.aboutpage }}">I'm {{ .Site.Params.Author.firstname }}</a></h3>
+        <p>
+          {{ partial "bio.html" . }}
+        </p>
+      </div>
+      {{ if isset .Site.Params.Author "flickrid" | and ( not ( eq .Site.Params.Author.flickrid "" ) ) }}
+      <div>
+          <h3><a href="https://www.flickr.com/photos/{{ .Site.Params.Author.flickrid }}/">Photo Stream</a></h3>
+          <div id="photos"></div>
+        </div>
+      </div>
+      {{ end }}
+  </div>
+
+  <hr/>
+  <div class="build-info">Updated: {{ now.Local.Format "Jan 2, 2006 at 3:04pm MST" | markdownify }}</div>
+
+  {{ if .Site.Params.showcopyright }}
+    <div class="footer_copyright">
+      &copy; {{ now.Format "2006" }} <a href="{{ .Site.Params.Author.aboutpage }}">{{ .Site.Params.Author.firstname }} {{ .Site.Params.Author.lastname }}</a>
+      {{ with .Site.Params.Author.location }} - Made in {{ . }}{{ end }}
+    </div>
+  {{ end }}
+</footer>
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/partials/page_footer.html -->` | safeHTML }}

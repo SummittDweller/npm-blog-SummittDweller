@@ -1,0 +1,32 @@
+{{ partial "site_header.html" . }}
+{{ partial "page_header.html" . }}
+
+{{ $file := "/announcement.md" }}
+{{ if (fileExists $file) -}}
+  <div class="announcement-card">
+    <div class="card-body">
+      <h1 class="card-title">
+        Attention!
+      </h1>
+      <div class="announcement">
+        {{ $file | readFile | markdownify }}
+      </div>
+    </div>
+  </div>
+{{- end }}
+
+<!--  Twitter widget is broken... remove it until resolved.
+<div class="timeline-card" crossorigin="anonymous">
+  <a class="twitter-timeline" crossorigin="anonymous" data-tweet-limit="1" href="https://twitter.com/SummittDweller?ref_src=twsrc%5Etfw">Tweets by SummittDweller</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div class="timeline-card" crossorigin="anonymous">
+  <a href="https://twitter.com/SummittDweller">The Twitter widget displayed above shows only my latest <b>unexpired</b> Tweet. To view additional tweets click this text or the "View on Twitter" link above.</a>
+</div>
+-->
+
+<main class="content list">
+  {{ partial "preview_list.html" . }}
+</main>
+
+{{ partial "page_footer.html" . }}
+{{ partial "site_footer.html" . }}

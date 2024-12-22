@@ -1,0 +1,13 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/partials/preview_onetab.html -->` | safeHTML }}
+<article class="onetab">
+  <p>
+    → <a rel="remote-article" href="{{ .Params.externalurl }}">{{ .Title }}</a><a href="{{ .Permalink }}"></a>
+    <span class="postmeta">
+      &nbsp;&nbsp;&nbsp;&nbsp;Updated: {{ .Lastmod.Format "Monday, 02 Jan 2006 15:04:05" }}
+      {{ if isSet .Params "hostname" }}
+        from {{ .Params.hostname }}
+      {{ end }}
+    </span>
+  </p>
+</article>
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/partials/preview_onetab.html -->` | safeHTML }}

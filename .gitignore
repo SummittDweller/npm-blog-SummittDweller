@@ -1,0 +1,7 @@
+.out-of-the-way
+public
+.DS_Store
+venv/
+.idea
+content/.posts
+.venv/

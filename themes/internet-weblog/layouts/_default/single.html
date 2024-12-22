@@ -1,0 +1,15 @@
+{{ `<!-- hugo: blogs-SummittDweller/themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}
+{{ partial "site_header.html" . }}
+{{ partial "page_header.html" . }}
+
+  <main class="content">
+    <article class="page">
+      <p>
+        {{ .Content }}
+      </p>
+    </article>
+  </main>
+
+{{ partial "page_footer.html" . }}
+{{ partial "site_footer.html" . }}
+{{ `<!-- /hugo: blogs-SummittDweller/themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}

@@ -1,0 +1,172 @@
+{{ `<!-- hugo: blogs-SummittDweller/layouts/shortcodes/hugo-timeline.html -->` | safeHTML }}
+{{ partial "console-log" "--- Start of hugo-timeline.html shortcode ---" }}
+
+<link rel="stylesheet" href="/css/hugo-timeline.css">
+
+{{/* ---------- Define a list of month names in reverse ---------- */}}
+{{ $months := slice "December" "November" "October" "September" "August" "July" "June" "May" "April" "March" "February" "January" }}
+
+{{/* ---------- Calculate an array of years for display ---------- */}}
+{{ $endYear := int (now.Format "2006") }}
+{{ if $.Page.Params.endYear }}
+  {{ $endYear = $.Page.Params.endYear }}
+{{ end }}
+
+{{ $minEventHeight := int 24 }}
+{{ if $.Page.Params.minEventHeight }}
+  {{ $minEventHeight = int $.Page.Params.minEventHeight }}
+{{ end }}
+{{ partial "console-log" (dict "$minEventHeight" $minEventHeight) }}
+
+{{ $heightPx := int $.Page.Params.heightPx }}
+{{ partial "console-log" (dict "$heightPx" $heightPx) }}
+
+{{ $startYear := $.Page.Params.startYear }}
+{{ $years := seq $endYear -1 $startYear }}
+{{ $numYears := len $years }}
+
+{{ partial "console-log" (dict "$startYyear" $startYear) }}
+{{ partial "console-log" (dict "$endYear" $endYear) }}
+{{ partial "console-log" (dict "$years" $years) }}
+
+{{/* ---------- Calculate pixel sizes for quantities of time, use a float to get non-rounded output from div ---------- */}}
+{{ $yearCountAsFloat := div $numYears 1.00 }}
+{{ $yearHeight := div $heightPx $yearCountAsFloat }}
+{{ $monthHeight := div $yearHeight 12.0 }}
+
+{{ partial "console-log" (dict "$yearCountAsFloat" $yearCountAsFloat) }}
+{{ partial "console-log" (dict "$yearHeight" $yearHeight) }}
+{{ partial "console-log" (dict "$monthHeight" $monthHeight) }}
+
+{{/* ---------- Calculate representations for $endYear-Dec-31 ---------- */}}
+{{/* $endYearText := printf "%d-12-31T23:59:59-06:00" $endYear */}}
+{{ $endYearText := printf "%d-12-31T23:59:59" $endYear }}
+{{ $topUnix := ($endYearText | time).Unix }}
+{{/* $startYearText := printf "%d-01-01T00:00:00-06:00" $startYear */}}
+{{ $startYearText := printf "%d-01-01T00:00:00" $startYear }}
+{{ $botUnix := ($startYearText | time).Unix }}
+
+{{ partial "console-log" (dict "$endYearText" $endYearText) }}
+{{ partial "console-log" (dict "$topUnix" $topUnix) }}
+{{ partial "console-log" (dict "$startYearText" $startYearText) }}
+{{ partial "console-log" (dict "$botUnix" $botUnix) }}
+
+{{/* ---------- Where the rubber meets the road ---------- */}}
+<div class="hugoTimeline">
+  <div class="inner" style="height: {{- $heightPx -}}px;"
+    data-comment="These data properties are for transparency; not actually used to build the timeline."
+    data-site-time="{{ now }}"
+    data-years-size="{{ len $years }}"
+    data-year-height="{{ $yearHeight }}"
+    data-month-height="{{ $monthHeight }}">
+
+    {{/* ---------- Print out lines that represent each year ---------- */}} 
+    {{ $top := 0 }}
+    {{ range $i, $y := $years }}  
+      {{ $top = mul $yearHeight $i }}
+      <b class="y{{- $y -}}" style="height: {{- $yearHeight -}}px; top: {{- $top -}}px;">
+        <label>{{ $y }}</label>
+        {{ range $m := $months }}
+          <i style="height: {{- $monthHeight -}}px" title="{{- $m }} {{ $y -}}"></i>
+        {{ end }}
+      </b>
+    {{ end }}
+
+    {{/* ---------- Print timeline event columns ----------  */}}
+  
+    {{/* ---------- Column 1 events ---------- */}}
+    {{ if $.Page.Params.col1 }}
+      <ol class="col col1" {{ if $.Page.Params.col1.width }} style="flex-basis:{{$.Page.Params.col1.width}}px" {{ end }} >
+        <li class="colTitle"><span>{{ $.Page.Params.col1.title }}</span></li>
+        {{ range $event := sort $.Page.Params.col1.events "to" "desc" }}
+          {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
+        {{ end }}
+      </ol>
+    {{ end }}
+    
+    {{/* ---------- Column 2 events ---------- */}}
+    {{ if $.Page.Params.col2 }}
+      <ol class="col col2" {{ if $.Page.Params.col2.width }} style="flex-basis:{{$.Page.Params.col2.width}}px" {{ end }} >
+        <li class="colTitle"><span>{{ $.Page.Params.col2.title }}</span></li>
+        {{ range $event := sort $.Page.Params.col2.events "to" "desc" }}
+          {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
+        {{ end }}
+      </ol>
+    {{ end }}
+
+    {{/* ---------- Column 3 events ---------- */}}
+    {{ if $.Page.Params.col3 }}
+      <ol class="col col3" {{ if $.Page.Params.col3.width }} style="flex-basis:{{$.Page.Params.col3.width}}px" {{ end }} >
+        <li class="colTitle"><span>{{ $.Page.Params.col3.title }}</span></li>
+        {{ range $event := sort $.Page.Params.col3.events "to" "desc" }}
+          {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
+        {{ end }}
+      </ol>
+    {{ end }}
+    
+    {{/* ---------- Column 4 events ---------- */}}
+    {{ if $.Page.Params.col4 }}
+      <ol class="col col4" {{ if $.Page.Params.col4.width }} style="flex-basis:{{$.Page.Params.col4.width}}px" {{ end }} >
+        <li class="colTitle"><span>{{ $.Page.Params.col4.title }}</span></li>
+        {{ range $event := sort $.Page.Params.col4.events "to" "desc" }}
+          {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
+        {{ end }}
+      </ol>
+    {{ end }}
+  
+    {{/* ---------- Column 5 events ---------- */}}
+    {{ if $.Page.Params.col5 }}
+      <ol class="col col5" {{ if $.Page.Params.col5.width }} style="flex-basis:{{$.Page.Params.col5.width}}px" {{ end }} >
+        <li class="colTitle"><span>{{ $.Page.Params.col5.title }}</span></li>
+        {{ range $event := sort $.Page.Params.col5.events "to" "desc" }}
+          {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
+        {{ end }}
+      </ol>
+    {{ end }}
+  
+  </div>
+</div>
+
+{{ partial "console-log" "--- End of hugo-timeline.html ---" }}
+
+{{/* Conversion from Jekyll/Liquid to Hugo 
+
+  This Jekyll template is responsible for building and displaying the overall timeline.  
+  This template will become a Hugo shortcode called from a Markdown page (.md).  
+  The .Page front matter parameters will be passed to this shortcode to replace Jekyll variables including:
+    include.startYear        // Int. Four digit year
+    include.timelineHeight   // Int. Pixel count
+    include.col1Title
+    include.col1Events: [    // Array of objects with the following fields. Can use _data/foo.yml or front matter to specify
+      {
+        name: String
+        to: Date
+        from: Date
+        description: String?
+      }
+    ]
+
+// Common Jekyll to Hugo changes... 
+1) Replace all opening '{% comment %}' tags with Hugo comment opening: curly-curly-slash-asterisk   
+2) Replace all closing '{% endcomment %}' tags with Hugo comment closing: asterisk-slash-curly-curly  
+3) Regex replace all '\{% assign (.+) = ' tags with '{{ $$$1 := ' and note the space after the = sign!
+4) Replace all closing ' %}' with ' }}'
+5) Replace all opening '{% ' with '{{ '
+
+// Original Jekyll Comment
+------------------------------------------ Dependencies
+  This template depends on:
+  include.startYear        // Int. Four digit year
+  include.timelineHeight   // Int. Pixel count
+  include.col1Title
+  include.col1Events: [    // Array of objects with the following fields. Can use _data/foo.yml or front matter to specify
+    {
+      name: String
+      to: Date
+      from: Date
+      description: String?
+    }
+  ]
+
+*/}}
+{{ `<!-- /hugo: blogs-SummittDweller/layouts/shortcodes//hugo-timeline.html -->` | safeHTML }}

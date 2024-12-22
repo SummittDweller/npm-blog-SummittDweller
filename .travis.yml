@@ -1,0 +1,43 @@
+## From https://github.com/narendrasoni1989/react-site/blob/master/.travis.yml and
+##   http://evanbrown.io/post/hugo-on-the-go/
+
+---
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  ## Next two lines commented out 11-Sept-2019 since they appear to cause apt-get update errors.
+  # - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  # - sudo apt-get update
+  - sudo apt-get -y install docker-ce
+
+language: go
+go:
+  - 1.13
+install:
+  - sudo pip install Pygments
+  - go get github.com/spf13/hugo
+script: hugo
+
+notifications:
+  email:
+    on_success: always # always notify of success
+    # on_success: change # only if status change from fail to success
+    on_failure: always # if there is a fail
+    recipients:
+      - mark.mcfate@icloud.com
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build --tag summittdweller/weblog-sd:latest .
+  - docker push summittdweller/weblog-sd:latest
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: echo "deployment successful...."
+  on:
+    branch: ["master"]

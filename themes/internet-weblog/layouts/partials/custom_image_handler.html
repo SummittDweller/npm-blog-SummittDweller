@@ -1,0 +1,13 @@
+{{ `<!-- hugo: blogs-SummittDweller/themes/internet-weblog/layouts/partials/custom_image_handler.html -->` | safeHTML }}
+<script type="text/javascript">
+
+  // @summary: jquery implementation
+  $(function() {
+    // @summary: Use the author's flickr ID to load images from the public flickr feed
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id={{ .Site.Params.Author.flickrid }}&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+{{ `<!-- /hugo: blogs-SummittDweller/themes/internet-weblog/layouts/partials/custom_image_handler.html -->` | safeHTML }}
