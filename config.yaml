@@ -61,6 +61,11 @@ menus:
       identifier: onetabs
       url: /onetabs/
       pre: ':link:'
+    - name: Mackenzie
+      weight: 55
+      identifier: mackenzie
+      url: /mackenzie-posts/
+      pre: ':brain:'
     - name: Timeline
       weight: 60
       identifier: timeline

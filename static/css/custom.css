@@ -214,6 +214,10 @@ nav ul > li {
   margin-top: 0 !important;
 }
 
+.other {
+  background-color: #e6c6ccb5 !important;
+}
+
 /* Pagefind UI control */
 
 div.fixed-top-two {

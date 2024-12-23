@@ -1,4 +1,4 @@
-{{ `<!-- hugo: blogs-SummittDweller/layouts/shortcodes/post.html -->` | safeHTML }}
+{{ `<!-- hugo: layouts/shortcodes/post.html -->` | safeHTML }}
 {{ $_hugo_config := `{ "version": 1 }` }}
 <article class="post">
   <h2><a href="{{ index .Params 1 }}" rel="full-article">{{ index .Params 0 }}</a></h2>
@@ -9,4 +9,4 @@
     {{ end }}
   </div>
 </article>
-{{ `<!-- /hugo: blogs-SummittDweller/layouts/shortcodes/post.html -->` | safeHTML }}
+{{ `<!-- /hugo: layouts/shortcodes/post.html -->` | safeHTML }}

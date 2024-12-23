@@ -1,4 +1,4 @@
-{{ `<!-- hugo: blogs-SummittDweller/layouts/partials/preview_list.html -->` | safeHTML }}
+{{ `<!-- hugo: layouts/partials/preview_list.html -->` | safeHTML }}
 
 {{ $pages := .Pages }}
 {{ if .IsHome }}
@@ -15,22 +15,18 @@
 
   {{ if or (eq .Type "onetabs") (eq .Type "onetab") }}
     {{ partial "preview_onetab.html" . }}
-  {{ end }}
-
-  {{ if or (eq .Type "microposts") (eq .Type "micropost") }}
+  {{ else if or (eq .Type "microposts") (eq .Type "micropost") }}
     {{ partial "preview_micropost.html" . }}
-  {{ end }}
-
-  {{ if or (eq .Type "photos") (eq .Type "photo") }}
+  {{ else if or (eq .Type "photos") (eq .Type "photo") }}
     {{ partial "preview_photo_post.html" . }}
-  {{ end }}
-
-  {{ if or (eq .Type "posts") (eq .Type "post") }}
+  {{ else if or (eq .Type "posts") (eq .Type "post") }}
     {{ partial "preview_post.html" . }}
+  {{ else }}
+    {{ partial "preview_other.html" . }}
   {{ end }}
 
 {{ end }}
 
 {{ partial "pagination.html" . }}
 
-{{ `<!-- /hugo: blogs-SummittDweller/layouts/partials/preview_list.html -->` | safeHTML }}
+{{ `<!-- /hugo: layouts/partials/preview_list.html -->` | safeHTML }}

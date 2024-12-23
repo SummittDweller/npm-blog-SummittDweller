@@ -1,8 +1,8 @@
-{{ `<!-- hugo: blogs-SummittDweller/layouts/posts/single.html -->` | safeHTML }}
 {{ partial "site_header.html" . }}
 {{ partial "page_header.html" . }}
 
-  <main class="content">
+{{ `<!-- hugo: layouts/posts/single.html -->` | safeHTML }}
+<main class="content">
 
     <article class="post">
       {{ if (not (isset .Params "externalurl")) }}
@@ -27,9 +27,8 @@
       </p>
     </article>
 
-
+    {{ `<!-- /hugo: layouts/posts/single.html -->` | safeHTML }}
   </main>
 
 {{ partial "page_footer.html" . }}
 {{ partial "site_footer.html" . }}
-{{ `<!-- /hugo: blogs-SummittDweller/layouts/posts/single.html -->` | safeHTML }}

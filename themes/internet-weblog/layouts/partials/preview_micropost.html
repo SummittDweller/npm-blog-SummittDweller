@@ -1,4 +1,5 @@
-{{ `<!-- hugo: blogs-SummittDweller/themes/internet-weblog/layouts/partials/preview_micropost.html -->` | safeHTML }}
+{{ `<!-- hugo: themes/internet-weblog/layouts/partials/preview_micropost.html -->` | safeHTML }}
+{{ `<!-- hugo: themes/internet-weblog/layouts/partials/preview_micropost.html -->` | safeHTML }}
 <article class="micropost">
   {{ if isset .Site.Params "summarizemicroposts" | and ( eq .Site.Params.summarizemicroposts true ) }}
     {{ if (not (isset .Params "externalurl")) }}
@@ -36,4 +37,5 @@
     <a href='{{ .Permalink }}'><aside class="dates">→ {{ .Date.Format "2006/01/02 3:04 PM" }}</aside></a>
   {{ end }}
 </article>
-{{ `<!-- /hugo: blogs-SummittDweller/themes/internet-weblog/layouts/partials/preview_micropost.html -->` | safeHTML }}
+{{ `<!-- /hugo: themes/internet-weblog/layouts/partials/preview_micropost.html -->` | safeHTML }}
+{{ `<!-- /hugo: themes/internet-weblog/layouts/partials/preview_micropost.html -->` | safeHTML }}
