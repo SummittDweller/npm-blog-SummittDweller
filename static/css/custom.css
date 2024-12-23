@@ -9,7 +9,11 @@ code {
   border-radius: 5px;
   padding: 1px 8px;
   font-family: inherit;
-  background-color: #ccc4c0;
+  background-color: #d0c8c385;
+}
+
+pre {
+  overflow: hidden;
 }
 
 .site-rev {
