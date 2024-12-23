@@ -7,9 +7,10 @@ theme: internet-weblog
 enableEmoji: true
 pygmentsstyle: emacs
 pagination.pagerSize: 25
-SectionPagesMenu: main
+# SectionPagesMenu: main
 # googleAnalytics: UA-146526628-2   MAM removed 12-Mar-2023
 EnableGitInfo: false
+
 params:
   Author:
     Handle: Summitt Dweller
@@ -21,38 +22,52 @@ params:
     Personal weblog of web professional, geocacher, camper, and volunteer, Mark
     McFate.
   ShowCopyright: true
-  RSSEnabled: true
-  RSSSections:
-    - Posts
-    - Microposts
-    - Hikes
-    - Photos
-  RSSMicropostTitles: false
+  # RSSEnabled: true
+  # RSSSections:
+  #   - Posts
+  #   - Microposts
+  #   - Hikes
+  #   - Photos
+  #   - Timeline
+  # RSSMicropostTitles: false
   showGists: true
   dropboxURL: 'https://dl.dropboxusercontent.com/s/6bfw16wyq8zn8vc/javascript-test.md?dl=0'
   maps: true
+
 taxonomies:
   tag: tags
   category: categories
   series: series
-menu:
+
+menus:
   main:
     - name: Microposts
       weight: 10
       identifier: microposts
       url: /microposts/
+      pre: ':mailbox_with_mail:'
     - name: Posts
       weight: 20
       identifier: posts
       url: /posts/
+      pre: ':outbox_tray:'
     - name: Photos
       weight: 40
       identifier: photos
       url: /photos/
+      pre: ':framed_picture:'
     - name: OneTabs
       weight: 50
       identifier: onetabs
       url: /onetabs/
+      pre: ':link:'
+    - name: Timeline
+      weight: 60
+      identifier: timeline
+      url: /timeline/
+      pre: ':hourglass_flowing_sand:'
+
+
 markup:
   goldmark: 
     renderer:

@@ -1,5 +1,6 @@
 {{ `<!-- hugo: blogs-SummittDweller/layouts/partials/page_header.html -->` | safeHTML }}
 <header>
+	{{ partial "pagefind.html" . }}
   <nav>
     <h1><a href="/">@{{ .Site.Params.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
     <div class="menu">
@@ -20,7 +21,7 @@
 			<ul>
 				{{ range .Site.Menus.main }}
 				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
+					{{ .Pre | markdownify }} <a href="{{.URL}}">{{ .Name }}</a>
 				</li>
 				{{ end }}
 				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
@@ -28,7 +29,6 @@
       	{{ end }}
     </div>
   </nav>
-	{{ partial "pagefind.html" . }}
 </header>
 
 {{ `<!-- /hugo: blogs-SummittDweller/layouts/partials/page_header.html -->` | safeHTML }}

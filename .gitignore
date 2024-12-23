@@ -1,7 +1,6 @@
 .out-of-the-way
-public
+public/
 .DS_Store
-venv/
 .idea
 content/.posts
-.venv/
+static/_pagefind
