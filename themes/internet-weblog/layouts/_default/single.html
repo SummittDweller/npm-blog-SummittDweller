@@ -1,17 +1,12 @@
-{{ `<!-- hugo: themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}
-{{ `<!-- hugo: themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}
 {{ partial "site_header.html" . }}
 {{ partial "page_header.html" . }}
 
   <main class="content">
+    {{ `<!-- hugo: themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}
     <article class="page">
-      <p>
-        {{ .Content }}
-      </p>
-    </article>
-  </main>
+      {{ .Content | markdownify }}
+    {{ `<!-- /hugo: themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}  </main>
+  </article>
 
 {{ partial "page_footer.html" . }}
 {{ partial "site_footer.html" . }}
-{{ `<!-- /hugo: themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}
-{{ `<!-- /hugo: themes/internet-weblog/layouts/_default/single.html -->` | safeHTML }}

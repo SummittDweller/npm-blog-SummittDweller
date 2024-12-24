@@ -63,6 +63,7 @@ article.onetab span.postmeta {
   line-height: 25px;
   /* margin: 0; */
   text-align: left;
+  padding: 0.5em 0;
 }
 
 .onetab > p {
@@ -134,10 +135,6 @@ div.from-dbox {
 
 .post h3 {
   margin-left: 0.5em !important;
-}
-
-.content {
-  /* margin-top: 1em; */
 }
 
 .post-group-item {
@@ -261,4 +258,10 @@ p.pagefind-ui__message {
 
 .pagefind-ui__result-image { 
   margin-left:10px;
+}
+
+.section-content {
+  background-color: rgb(223, 208, 221);
+  padding: 1em 2em;
+  border: 1px solid black;
 }

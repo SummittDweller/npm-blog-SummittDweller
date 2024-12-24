@@ -1,5 +1,11 @@
 {{ `<!-- hugo: layouts/partials/preview_list.html -->` | safeHTML }}
 
+{{ if .Content }}
+  <div class="section-content post">
+    {{ .Content }}
+  </div>
+{{ end }}
+
 {{ $pages := .Pages }}
 {{ if .IsHome }}
   {{ $pages = .Site.RegularPages }}
