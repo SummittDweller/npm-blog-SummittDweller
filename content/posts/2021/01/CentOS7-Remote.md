@@ -3,7 +3,7 @@ title: "CentOS 7 Remote Using VNC"
 publishDate: 2021-01-04
 lastmod: 2021-01-07T14:51:19-06:00
 location: "Toledo,IA"
-weight: -20210104
+# weight: -20210104
 draft: false
 tags:
   - VNC

@@ -3,7 +3,7 @@ title: Moving to Netlify CMS
 publishDate: 2021-04-04T20:14:08-05:00
 lastmod: 2021-06-06T15:07:01-05:00
 location: Toledo, IA
-weight: "-20210404"
+# weight: "-20210404"
 draft: false
 description: Moving my new Netlify CMS configuration to Netlify
 # Enter comma separated values.

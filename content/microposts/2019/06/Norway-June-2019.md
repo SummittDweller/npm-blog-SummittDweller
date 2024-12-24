@@ -4,7 +4,7 @@ lastmod: 2019-08-02T23:09:43-05:00
 title: "Norway - June 2019"
 location: "Norway (mostly)"
 camera: "iPhone 8"
-weight: -20190601
+# weight: -20190601
 ---
 
 From June 11th through the 23rd, we (that's me, Chris, her brother Mark, sister Deb, and Deb's husband, Doug) traveled to Norway.  Our rough itinerary was:

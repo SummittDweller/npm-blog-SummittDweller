@@ -4,7 +4,7 @@ title: "Tama-Toledo Parks - Derecho Follow-Up for August 24"
 publishDate: 2020-08-24
 lastmod: 2020-08-24T11:20:13-05:00
 location: "Toledo, Iowa"
-weight: -20200824
+# weight: -20200824
 draft: false
 tags:
   - Derecho

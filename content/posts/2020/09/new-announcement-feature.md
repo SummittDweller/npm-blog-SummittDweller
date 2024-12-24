@@ -3,7 +3,7 @@ title: "New Announcement Feature"
 publishDate: 2020-09-13
 lastmod: 2020-09-13T11:42:54-05:00
 location: "Toledo, Iowa"
-weight: -20200913
+# weight: -20200913
 draft: false
 tags:
   - Announcement

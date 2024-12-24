@@ -3,7 +3,7 @@ title: Proper Python
 publishDate: 2022-09-24T14:26:44-05:00
 lastmod: 2022-09-26T12:00:29-05:00
 location: Toledo, IA
-weight: "-20220924"
+# weight: "-20220924"
 draft: false
 description: A new Python approach based on my `blog.summittdweller.com` site.
 # Enter comma separated values.

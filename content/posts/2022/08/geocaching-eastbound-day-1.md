@@ -4,7 +4,7 @@ title: Eastbound from Seattle - Day 1
 publishDate: 2022-08-07T21:13:11-05:00
 lastmod: 2022-08-07T21:13:17-05:00
 location: Toledo, IA
-weight: "-20220822"
+# weight: "-20220822"
 draft: false
 description: Eastbound Geocaching Trip from Seattle - Day 1
 # Enter comma separated values.

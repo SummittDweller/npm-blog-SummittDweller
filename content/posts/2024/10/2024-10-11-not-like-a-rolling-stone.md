@@ -7,7 +7,7 @@ tags:
   - Eleventy
   - Home
 hero_image: https://images.unsplash.com/photo-1438006864692-327506ca1997?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDN8fG1vc3N8ZW58MHx8fHwxNzI4Njc2Njk3fDA&ixlib=rb-4.0.3&q=80&w=2000
-weight: -20241011
+# weight: -20241011
 ---
 
 Where has the last year gone?  While life (metaphorically the stream in the hero image) rolls on, this blog (any of the moss covered rocks in the image) has not. 

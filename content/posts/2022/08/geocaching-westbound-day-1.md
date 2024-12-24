@@ -4,7 +4,7 @@ title: Westbound to Seattle - Day 1
 publishDate: 2022-08-07T16:57:10-05:00
 lastmod: 2022-08-07T16:57:17-05:00
 location: Toledo, IA
-weight: "-20220816"
+# weight: "-20220816"
 draft: false
 description: Westbound Geocaching Trip to Seattle - Day 1
 # Enter comma separated values.

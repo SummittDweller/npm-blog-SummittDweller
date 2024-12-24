@@ -3,7 +3,7 @@ title: Adding Netlify CMS for Editing This Blog
 publishDate: 2021-03-27T02:40:11.820Z
 lastmod: 2021-04-04T20:13:36-05:00
 location: Toledo, IA
-weight: -20210326
+# weight: -20210326
 draft: false
 description: Testing my new Netlify CMS configuration here
 # Enter comma separated values.

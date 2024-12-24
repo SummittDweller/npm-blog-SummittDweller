@@ -3,7 +3,7 @@ title: Adding "Remote Atom" to My DigitalOcean Server
 publishDate: 2020-03-15
 lastmod: 2020-03-15T00:47:02-05:00
 location: "Toledo, Iowa"
-weight: -20200315
+# weight: -20200315
 draft: false
 tags:
   - Atom

@@ -6,7 +6,8 @@
 {{ end }}
 {{ $paginator := .Paginate $pages }}
 
-{{ range (.Paginator.Pages.ByLastmod).Reverse }}
+{{ range (.Paginator.Pages.ByDate).Reverse }}
+{{/* range (.Paginator.Pages.ByLastmod).Reverse */}}
 
   {{/* <h1> Debugging = Check Console </h1> */}}
   {{/* <script>console.log({{ .Type }});</script> */}}

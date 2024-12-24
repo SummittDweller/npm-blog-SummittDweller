@@ -3,7 +3,7 @@ title: A Close Call Indeed
 slug: a-close-call-indeed
 date: 2023-06-24T14:00:00.000Z
 date_updated: 2023-06-24T14:48:41.000Z
-weight: -20230624
+# weight: -20230624
 tags:
   - Travel
 ---

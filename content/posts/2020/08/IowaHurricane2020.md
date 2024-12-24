@@ -4,7 +4,7 @@ title: "Iowa's 2020 Hurricane"
 publishDate: 2020-08-18
 lastmod: 2020-08-20T22:18:25-05:00
 location: "Toledo, Iowa"
-weight: -20200818
+# weight: -20200818
 draft: false
 tags:
   - Derecho

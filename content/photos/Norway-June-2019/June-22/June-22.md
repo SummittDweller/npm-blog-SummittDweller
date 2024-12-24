@@ -4,7 +4,7 @@ lastmod: 2019-08-04T08:55:55-05:00
 title: Departed Nesflaten for Røldal, Telemark, and Oslo - June 22, 2019
 location: Toledo, Iowa
 camera: iPhone 8
-weight: -20190622
+# weight: -20190622
 draft: false
 ---
 

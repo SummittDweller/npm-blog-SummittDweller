@@ -5,7 +5,7 @@ date: 2023-04-03T15:53:47.000Z
 date_updated: 2023-04-05T03:22:18.000Z
 tags: 
   - Work
-weight: -20230403
+# weight: -20230403
 location: Grinnell, IA
 ---
 

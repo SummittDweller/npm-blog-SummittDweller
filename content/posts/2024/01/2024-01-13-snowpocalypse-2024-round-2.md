@@ -6,7 +6,7 @@ tags:
   - Home
   - Weather
 hero_image: https://summittservices.blob.core.windows.net/summitt-dweller-blog/images/2024/01/IMG_1551.png
-weight: -20240113
+# weight: -20240113
 ---
 
 Just thought I would post a couple more photos, with a probable update later today.  Took these photos yesterday (Friday, January 12) at about noon when I ventured outside to clear the driveway.  Didn't quite get it all done because it was just too cold and windy, and the snow was still falling.  I didn't even attempt to clear the front porch... ain't nobody coming to visit today anyway.  8^)  

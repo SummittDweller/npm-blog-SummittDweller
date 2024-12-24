@@ -3,7 +3,7 @@ title: Implementing Pagefind Here
 slug: implementing-pagefind-here
 date: 2023-04-19T05:38:32.000Z
 date_updated: 2023-04-20T15:00:56.000Z
-weight: -20230419
+# weight: -20230419
 tags: 
   - Development
 location: Toledo, IA

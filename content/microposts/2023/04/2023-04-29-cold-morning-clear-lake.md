@@ -3,7 +3,7 @@ title: Cold Morning Clear Lake
 slug: cold-morning-clear-lake
 date: 2023-04-29T12:33:46.000Z
 date_updated: 2023-04-29T12:33:46.000Z
-weight: -20230429
+# weight: -20230429
 tags:
   - Vacation
   - Geocaching

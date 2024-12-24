@@ -5,7 +5,7 @@ date: 2023-05-31T02:10:06.000Z
 date_updated: 2023-05-31T02:10:06.000Z
 tags: 
   - Home
-weight: -20230531
+# weight: -20230531
 location: Tama, Iowa
 ---
 

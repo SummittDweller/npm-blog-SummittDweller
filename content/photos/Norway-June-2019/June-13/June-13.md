@@ -4,7 +4,7 @@ lastmod: 2019-08-02T23:26:15-05:00
 title: Wrath of the Midnight Sun + Finland
 location: Kirkenes, rural Finnmark and Finland
 camera: iPhone 8
-weight: -20190613
+# weight: -20190613
 draft: false
 ---
 

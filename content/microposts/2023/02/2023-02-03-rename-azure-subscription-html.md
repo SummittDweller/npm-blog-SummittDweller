@@ -3,7 +3,7 @@ title: Rename Azure Subscription
 publishDate: 2023-02-04T09:36:17-06:00
 lastmod: 2023-02-04T09:36:17-06:00
 location: Toledo, IA
-weight: -20230204
+# weight: -20230204
 tags: 
   - Development
   - Azure

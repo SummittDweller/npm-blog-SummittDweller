@@ -3,7 +3,7 @@ title: "One of Many Challenges"
 publishDate: 2021-02-20
 lastmod: 2021-02-20T11:13:09-06:00
 location: "Toledo,IA"
-weight: -20210220
+# weight: -20210220
 draft: false
 tags:
   - Toledo

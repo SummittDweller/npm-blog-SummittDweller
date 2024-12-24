@@ -3,7 +3,7 @@ title: "Pandemic Pastime: Walking and Picking Up Trash"
 publishDate: 2020-08-03
 lastmod: 2020-08-03T11:55:05-05:00
 location: "Toledo, Iowa"
-weight: -20200803
+# weight: -20200803
 draft: false
 tags:
   - walking

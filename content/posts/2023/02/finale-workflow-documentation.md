@@ -1,7 +1,7 @@
 ---
 title: Finale Workflow Documentation
 publishDate: 2023-02-08
-last_modified_at: 2024-12-22T15:26:26
+last_modified_at: 2024-12-23T20:25:47
 draft: false
 description: "Christine's Finale workflow captured using my new documentation approach"
 azure:
@@ -10,7 +10,7 @@ azure:
 publishDate: 2023-02-08
 lastmod: 2023-02-08T14:54:39
 location: Toledo, IA
-weight: -20230208
+# weight: -20230208
 draft: false
 author: Mark McFate
 ---

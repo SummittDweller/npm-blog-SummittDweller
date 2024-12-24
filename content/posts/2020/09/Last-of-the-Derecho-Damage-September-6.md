@@ -4,7 +4,7 @@ title: "Last of the Clean-up? - Derecho Follow-Up for September 6"
 publishDate: 2020-09-06
 lastmod: 2020-09-06T19:52:57-05:00
 location: "Toledo, Iowa"
-weight: -20200906
+# weight: -20200906
 draft: false
 tags:
   - Derecho

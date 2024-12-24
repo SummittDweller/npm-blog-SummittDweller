@@ -8,7 +8,7 @@ tags:
   - Shortcuts
   - iOS
 hero_image: https://summittservices.blob.core.windows.net/summitt-dweller-blog/images/2024/11/IMG_469CBC9951B6-1.jpeg
-weight: -20241110
+# weight: -20241110
 ---
 
 Wow, this post is long overdue.  

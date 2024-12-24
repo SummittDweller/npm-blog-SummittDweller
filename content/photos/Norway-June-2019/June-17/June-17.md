@@ -4,7 +4,7 @@ lastmod: 2019-08-02T23:26:15-05:00
 title: Photoset Markdown - June 17, 2019
 location: Toledo, Iowa
 camera: iPhone 8
-weight: -20190617
+# weight: -20190617
 draft: false
 ---
 

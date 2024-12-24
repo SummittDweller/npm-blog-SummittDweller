@@ -3,7 +3,7 @@ title: "Paperless-ng on CentOS7"
 publishDate: 2021-01-07
 lastmod: 2021-01-07T14:59:28-06:00
 location: "Toledo,IA"
-weight: -20210107
+# weight: -20210107
 draft: false
 tags:
   - Paperless-ng

@@ -3,7 +3,7 @@ title: Wrapping Hugo in NPM
 slug: wrapping-hugo-in-npm
 date: 2023-05-09T23:13:09.000Z
 date_updated: 2023-05-10T14:56:55.000Z
-weight: -20230509
+# weight: -20230509
 tags:
   - Development
   - Azure

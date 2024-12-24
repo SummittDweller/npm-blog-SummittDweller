@@ -1,9 +1,9 @@
 ---
 title: My Hugo Timeline, A New Hugo Module
 publishDate: 2022-12-06T13:30:13-06:00
-last_modified_at: 2024-12-22T15:26:25
+last_modified_at: 2024-12-23T20:25:47
 location: Toledo, IA
-weight: "-20221206"
+# weight: "-20221206"
 draft: false
 description: Introducing SummittDweller/hugo-timeline
 # Enter comma separated values.

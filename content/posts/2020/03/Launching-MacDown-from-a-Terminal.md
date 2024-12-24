@@ -3,7 +3,7 @@ title: Launching MacDown from a Terminal
 publishDate: 2020-03-15
 lastmod: 2020-03-15T16:04:08-05:00
 location: Toledo, Iowa
-weight: -20200315
+# weight: -20200315
 draft: false
 tags:
   - MacDown

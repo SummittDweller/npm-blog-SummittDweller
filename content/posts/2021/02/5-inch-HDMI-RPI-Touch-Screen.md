@@ -3,7 +3,7 @@ title: "5-Inch HDMI Raspberry Pi Touch Screen"
 publishDate: 2021-02-05
 lastmod: 2021-02-05T23:26:27-06:00
 location: "Toledo,IA"
-weight: -20210205
+# weight: -20210205
 draft: false
 tags:
   - HDMI

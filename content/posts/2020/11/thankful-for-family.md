@@ -3,7 +3,7 @@ title: "Thanksgiving 2020"
 publishDate: 2020-11-26
 lastmod: 2020-11-26T12:29:32-06:00
 location: "Toledo, Iowa"
-weight: -20201126
+# weight: -20201126
 draft: false
 tags:
   - Thanksgiving

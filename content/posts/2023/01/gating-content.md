@@ -1,9 +1,9 @@
 ---
 title: Gating My Content
 publishDate: 2023-01-30T14:45:01-06:00
-last_modified_at: 2024-12-22T15:26:25
+last_modified_at: 2024-12-23T20:25:47
 location: Toledo, IA
-weight: -20230130
+# weight: -20230130
 draft: false
 description: My first attempt at gating contnet in Wieting.TamaToledo.com
 tags:

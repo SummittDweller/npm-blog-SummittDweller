@@ -1,9 +1,9 @@
 ---
 title: Fixing a Broken GitHub Repo
 publishDate: 2023-01-19T13:30:13-06:00
-last_modified_at: 2024-12-22T15:26:25
+last_modified_at: 2024-12-23T20:25:47
 location: Toledo, IA
-weight: -20230119
+# weight: -20230119
 draft: false
 description: Fixing a broken GitHub repo after pushing a too-large file
 tags:

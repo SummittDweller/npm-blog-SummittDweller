@@ -2,9 +2,9 @@
 publishDate: 2023-03-02
 lastmod: 2023-03-02T11:53:05-06:00
 location: Toledo, IA
-weight: -20230302
+# weight: -20230302
 draft: false
-last_modified_at: 2024-12-22T15:26:22
+last_modified_at: 2024-12-23T20:25:42
 ---
 Last evening I successfully completed a move of [ItalianoWoods.com](https://italianowoods.com) from a defunct presence on _DigitalOcean_ to a landing site and working email via _Azure_ and _Azure DNS_.  Details can be found in a few places, including:  
 

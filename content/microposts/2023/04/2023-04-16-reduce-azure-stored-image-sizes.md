@@ -3,7 +3,7 @@ title: Reduce Spaces Stored Image Sizes
 slug: reduce-azure-stored-image-sizes
 date: 2023-04-16T13:28:11.000Z
 date_updated: 2023-04-16T19:40:37.000Z
-weight: -20230416
+# weight: -20230416
 tags: 
   - Development
 ---

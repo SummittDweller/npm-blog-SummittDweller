@@ -4,7 +4,7 @@ lastmod: 2019-08-04T08:32:51-05:00
 title: "Norway - June 2019"
 location: "Norway (mostly)"
 camera: "iPhone 8"
-weight: -20190624
+# weight: -20190624
 ---
 
 <figure>

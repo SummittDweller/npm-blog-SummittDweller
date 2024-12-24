@@ -3,7 +3,7 @@ title: Home Automation
 publishDate: 2020-05-09
 lastmod: 2020-05-09T11:02:06-05:00
 location: "Toledo, Iowa"
-weight: -20200509
+# weight: -20200509
 draft: false
 externalurl: https://www.one-tab.com/page/0fj_WcQ0TkG256iDV3EE2g
 ---

@@ -2,7 +2,7 @@
 title: Improving My Azure Blob Storage
 slug: improving-my-azure-blob-storage
 date: 2023-11-20T19:00:04.000Z
-weight: -20231120
+# weight: -20231120
 date_updated: 2023-12-23T12:06:05.000Z
 # type: micropost
 tags:

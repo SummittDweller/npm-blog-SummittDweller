@@ -1,7 +1,7 @@
 ---
 title: DSM and Geocaching
 date: 2024-12-21T11:33:21-06:00
-weight: -20241221
+# weight: -20241221
 tags:
 location: Waukee, IA
 ---

@@ -7,7 +7,7 @@ tags:
   - Development
   - Wieting Theatre
 hero_image: https://summittservices.blob.core.windows.net/summitt-dweller-blog/images/2024/01/Screenshot-2024-01-13-at-09.34.52.png
-weight: -20240113
+# weight: -20240113
 ---
 
 Today is Saturday, January 13, 2024, and I won't be able to watch the KC Chief's wildcard playoff game vs. the Miami Dolphins tonight because it is streaming ONLY on Peacock, and I refuse to pay them for the "privilege" to watch it live.  So, I'm going to do something productive instead.  Let's see if I can spin up an instance of [StaticCMS](https://www.staticcms.org/) to provide an OPEN CMS for the content editor(s) behind the [Wieting Theatre website](https://Wieting.TamaToledo.com).  

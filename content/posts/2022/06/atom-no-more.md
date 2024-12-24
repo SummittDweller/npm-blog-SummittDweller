@@ -3,7 +3,7 @@ title: Atom No More?
 publishDate: 2022-06-09T09:14:39-05:00
 lastmod: 2022-07-19T10:07:59-05:00
 location: Toledo, IA
-weight: "-20220609"
+# weight: "-20220609"
 draft: false
 description: Migrating workflows from Atom to Visual Studio Code
 # Enter comma separated values.

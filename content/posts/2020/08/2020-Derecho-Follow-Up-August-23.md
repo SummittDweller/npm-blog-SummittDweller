@@ -4,7 +4,7 @@ title: "Derecho Follow-Up - Saturday, August 22"
 publishDate: 2020-08-22
 lastmod: 2020-08-22T21:45:48-05:00
 location: "Toledo, Iowa"
-weight: -20200822
+# weight: -20200822
 draft: false
 tags:
   - Derecho

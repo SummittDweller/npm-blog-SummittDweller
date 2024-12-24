@@ -1,9 +1,9 @@
 ---
 title: How MY Web Works
 publishDate: 2022-11-30T17:45:11-06:00
-last_modified_at: 2024-12-22T15:26:25
+last_modified_at: 2024-12-23T20:25:47
 location: Toledo, IA
-weight: "-20221130"
+# weight: "-20221130"
 draft: false
 description: Getting a handle on all MY web sites and apps.
 # Enter comma separated values.

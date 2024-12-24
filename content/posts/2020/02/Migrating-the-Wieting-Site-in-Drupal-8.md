@@ -3,7 +3,7 @@ title: Migrating the Wieting Site in Drupal 8
 publishDate: 2020-02-28
 lastmod: 2020-03-01T08:33:46-06:00
 location: Toledo, Iowa
-weight: -20200228
+# weight: -20200228
 draft: false
 tags:
   - Wieting

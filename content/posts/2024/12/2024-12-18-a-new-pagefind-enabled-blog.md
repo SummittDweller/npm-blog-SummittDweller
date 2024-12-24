@@ -1,7 +1,7 @@
 ---
 title: A New Pagefind Enabled Blog!
 slug: new-pagefind-enabled-blog
-weight: -20241218
+# weight: -20241218
 date: 2024-12-18T08:31:49-06:00
 date_updated: 2024-12-18T08:31:57-06:00
 tags: 
