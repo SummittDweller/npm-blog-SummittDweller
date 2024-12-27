@@ -1,5 +1,14 @@
+/* Define our background color pallette */
+
+:root {
+  --lt1: #f0f0f0;
+  --lt2: #c5d5c5;
+  --lt3: #e3e0cc;
+  --dk1: #9fa9a3;
+}
+
 div.original {
-  background-color: #C0C0B0;
+  background-color: #c0c0b06e;
   padding: 1em 2em !important;
   margin: 2em 1em;
 }
@@ -9,7 +18,7 @@ code {
   border-radius: 5px;
   padding: 1px 8px;
   font-family: inherit;
-  background-color: #d0c8c385;
+  background-color: #d0c8c351;
 }
 
 pre {
@@ -22,7 +31,7 @@ pre {
 }
 
 blockquote {
-  background-color: #F0F2F5;
+  background-color: #f0f2f569;
   color: #999999;
   padding: 5px;
   margin: 0;
@@ -34,17 +43,8 @@ blockquote p {
   margin: 0;
 }
 
-.micropost {
-  background-color: #F0F2F5;
-  /* margin: 40px auto; */
-  margin: 5px auto;
-  padding: 10px;
-  max-width: 780px;
-  border-radius: 10px;
-}
-
 .onetab {
-  background-color: #e8e7f7;
+  background-color: #e8e7f771;
   /* margin: 40px auto; */
   margin: 0px auto;
   padding: 0px 5px 0px 15px;
@@ -63,7 +63,7 @@ article.onetab span.postmeta {
   line-height: 25px;
   /* margin: 0; */
   text-align: left;
-  padding: 0.5em 0;
+  padding: 0.25em 0;
 }
 
 .onetab > p {
@@ -120,7 +120,7 @@ div.my-gists {
 }
 
 div.from-dbox {
-  display: block
+  display: block;
   background: whitesmoke;
   border: 5px solid red;
   width: 80%;
@@ -204,7 +204,7 @@ nav ul > li {
 }
 
 .post {
-  background-color: #dbe6c6b5;
+  background-color: #dbe6c660;
   margin: 5px auto;
   padding: 10px;
   max-width: 780px;
@@ -216,7 +216,13 @@ nav ul > li {
 }
 
 .other {
-  background-color: #e6c6ccb5 !important;
+  background-color: #e6c6cc58 !important;
+}
+
+.section-content {
+  background-color: rgb(223, 208, 221);
+  padding: 0 2em;
+  border: 1px solid black;
 }
 
 /* Pagefind UI control */
@@ -260,8 +266,22 @@ p.pagefind-ui__message {
   margin-left:10px;
 }
 
-.section-content {
-  background-color: rgb(223, 208, 221);
-  padding: 1em 2em;
-  border: 1px solid black;
+/* New CSS */
+
+.micropost, .post {
+  margin: 5px auto;
+  padding: 10px;
+  max-width: 780px;
+  border-radius: 10px;
 }
+
+.post {
+  background-color: var(--lt2);
+  color: black;
+}
+
+.micropost {
+  background-color: var(--lt1);
+  color: black;
+}
+
