@@ -1,4 +1,8 @@
-# blogs-SummittDweller
+# npm-blog-SummittDweller
+
+This blog now features search with [Pagefind](https://pagefind.app/) via [npm](https://www.npmjs.com/).  Use `npm run serve` to launch a full `localhost` test instance.  
+
+<div style="border: 3px solid red; text-align: center;">What follows is from an earlier iteration of this blog that did NOT use `Pagefind`.  Much of this information is obsolete.</div>
 
 The Python portions of this repo were gleaned from https://github.com/SummittDweller/hikes. 
 This is the repo for my https://blog.SummittDweller.com/ static website.
