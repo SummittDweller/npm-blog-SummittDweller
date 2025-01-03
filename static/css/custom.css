@@ -2,11 +2,12 @@
 
 :root {
   --lt1: #f0f0f0;
+  --lt1-code: #f0f0f030;
   --lt2: #c5d5c5;
+  --lt2-code: #c5d5c530;
   --lt3: #e3e0cc;
+  --lt3-code: #e3e0cc30;
   --dk1: #2e4d3b;
-  --lighten: 20%;
-  --darken: 15%;
 }
 
 div.original {
@@ -20,7 +21,6 @@ code {
   border-radius: 5px;
   padding: 1px 8px;
   font-family: inherit;
-  background-color: #d0c8c351;
 }
 
 pre {
@@ -63,7 +63,7 @@ article.onetab span.postmeta {
   color: #000000;
   font-size: 18px;
   line-height: 25px;
-  /* margin: 0; */
+  margin: 0; 
   text-align: left;
   padding: 0.25em 0;
 } */
@@ -78,7 +78,7 @@ div.announcement-card {
   justify-content: center;
   background: whitesmoke;
   border: 5px solid orange;
-  width: 80%;
+  width: 90%;
   text-align: center;
   margin: 5px auto;
   padding: 1em;
@@ -183,9 +183,8 @@ nav ul > li {
 }
 
 .postmeta {
-  font-size: 12px !important;
-  margin-top: -10px !important; 
-  padding: 5px 0 0 10px;
+  font-size: 14px !important;
+  margin-top: -8px !important; 
 }
 
 .micropost div.bold {
@@ -261,8 +260,9 @@ p.pagefind-ui__message {
   color: black;
 }
 
-.post code {
-  background-color: calc(var(--lt1) + var(--darken));
+.post p code {
+  background-color: var(--lt1-code) !important;
+  font-weight: 600;
 }
 
 .micropost {
@@ -270,8 +270,9 @@ p.pagefind-ui__message {
   color: black;
 }
 
-.micropost code {
-  background-color: calc(var(--lt2) + var(--darken));
+.micropost p code {
+  background-color: var(--lt2-code) !important;
+  font-weight: 600;
 }
 
 .other {
@@ -279,8 +280,9 @@ p.pagefind-ui__message {
   color: black;
 }
 
-.other code {
-  background-color: calc(var(--lt3) + var(--darken));
+.other p code {
+  background-color: var(--lt3-code) !important;
+  font-weight: 600;
 }
 
 /* .other {
@@ -304,6 +306,7 @@ p.pagefind-ui__message {
 
 .common h2 {
   margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .common h3 {
