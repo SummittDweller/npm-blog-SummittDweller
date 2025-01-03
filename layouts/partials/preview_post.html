@@ -1,7 +1,7 @@
 {{ `<!-- hugo: layouts/partials/preview_post.html -->` | safeHTML }}
 {{ if (not (isset .Params "consolidated")) }}
   
-  <article class="post">
+  <article class="common post">
     {{ if (not (isset .Params "externalurl")) }}
       <h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ else }}

@@ -4,7 +4,9 @@
   --lt1: #f0f0f0;
   --lt2: #c5d5c5;
   --lt3: #e3e0cc;
-  --dk1: #9fa9a3;
+  --dk1: #2e4d3b;
+  --lighten: 20%;
+  --darken: 15%;
 }
 
 div.original {
@@ -57,14 +59,14 @@ article.onetab span.postmeta {
   color: black;
 }
 
-.micropost > p, .post > p, .page > p {
+/* .micropost > p, .post > p, .page > p {
   color: #000000;
   font-size: 18px;
   line-height: 25px;
   /* margin: 0; */
   text-align: left;
   padding: 0.25em 0;
-}
+} */
 
 .onetab > p {
   margin: 0;
@@ -129,14 +131,6 @@ div.from-dbox {
   margin-top: 5px;
 }
 
-.post h1, .post h2, .post h3, .post h4 {
-  margin-top: 1em !important;
-}
-
-.post h3 {
-  margin-left: 0.5em !important;
-}
-
 .post-group-item {
   flex: auto;
   /* width: 40%; */
@@ -151,10 +145,6 @@ header {
 
 .page, .post-groups {
   margin: 20px auto !important;
-}
-
-.post, .page, .post-groups {
-  max-width: 780px;
 }
 
 div.prev-next {
@@ -194,7 +184,6 @@ nav ul > li {
 
 .postmeta {
   font-size: 12px !important;
-  color: #888888 !important;
   margin-top: -10px !important; 
   padding: 5px 0 0 10px;
 }
@@ -203,21 +192,13 @@ nav ul > li {
   font-weight: 800;
 }
 
-.post {
+/* .post {
   background-color: #dbe6c660;
   margin: 5px auto;
   padding: 10px;
   max-width: 780px;
   border-radius: 10px;
-}
-
-.post h2 {
-  margin-top: 0 !important;
-}
-
-.other {
-  background-color: #e6c6cc58 !important;
-}
+} */
 
 .section-content {
   background-color: rgb(223, 208, 221);
@@ -266,22 +247,66 @@ p.pagefind-ui__message {
   margin-left:10px;
 }
 
-/* New CSS */
-
-.micropost, .post {
+/* .micropost, .post {
   margin: 5px auto;
   padding: 10px;
   max-width: 780px;
   border-radius: 10px;
-}
+} */
+
+/* New CSS colors */
 
 .post {
+  background-color: var(--lt1);
+  color: black;
+}
+
+.post code {
+  background-color: calc(var(--lt1) + var(--darken));
+}
+
+.micropost {
   background-color: var(--lt2);
   color: black;
 }
 
-.micropost {
-  background-color: var(--lt1);
+.micropost code {
+  background-color: calc(var(--lt2) + var(--darken));
+}
+
+.other {
+  background-color: var(--lt3);
   color: black;
+}
+
+.other code {
+  background-color: calc(var(--lt3) + var(--darken));
+}
+
+/* .other {
+  background-color: var(--dk1);
+  color: white;
+} */
+
+/* Common properties - geometry only, no colors */
+
+.common {
+  padding: 1em 2%;
+  margin: 0.25em 5%;
+  border-radius: 10px;
+  max-width: none !important;
+  text-align: left;
+}
+
+.common h1, .common h3, .common h4 {
+  margin-top: 1em !important;
+}
+
+.common h2 {
+  margin-top: 0 !important;
+}
+
+.common h3 {
+  margin-left: 0.5em !important;
 }
 
