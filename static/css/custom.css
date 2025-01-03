@@ -2,11 +2,8 @@
 
 :root {
   --lt1: #f0f0f0;
-  --lt1-code: #f0f0f030;
   --lt2: #c5d5c5;
-  --lt2-code: #c5d5c530;
   --lt3: #e3e0cc;
-  --lt3-code: #e3e0cc30;
   --dk1: #2e4d3b;
 }
 
@@ -17,10 +14,8 @@ div.original {
 }
 
 code {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 1px 8px;
-  font-family: inherit;
+  font-family: serif;
+  font-weight: 750;
 }
 
 pre {
@@ -152,32 +147,6 @@ div.prev-next {
   padding: 10px;
 }
 
-.prev-hike {
-  display: block;
-  float: left;
-  padding: 10px 5px;
-}
-
-.next-hike {
-  display: block;
-  float: right;
-  padding: 10px 5px;
-}
-
-div.statistics {
-  display: block;
-  width: 50%;
-  margin: 5px auto 15px;
-  border: 5px solid green;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-p.trash-stats {
-  font-size: larger;
-  font-weight: bold;
-}
-
 nav ul > li {
   padding: 5px;
 }
@@ -260,29 +229,14 @@ p.pagefind-ui__message {
   color: black;
 }
 
-.post p code {
-  background-color: var(--lt1-code) !important;
-  font-weight: 600;
-}
-
 .micropost {
   background-color: var(--lt2);
   color: black;
 }
 
-.micropost p code {
-  background-color: var(--lt2-code) !important;
-  font-weight: 600;
-}
-
 .other {
   background-color: var(--lt3);
   color: black;
-}
-
-.other p code {
-  background-color: var(--lt3-code) !important;
-  font-weight: 600;
 }
 
 /* .other {
@@ -292,7 +246,7 @@ p.pagefind-ui__message {
 
 /* Common properties - geometry only, no colors */
 
-.common {
+.common, .micropost {
   padding: 1em 2%;
   margin: 0.25em 5%;
   border-radius: 10px;
