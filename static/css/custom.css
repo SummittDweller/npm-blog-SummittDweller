@@ -251,7 +251,7 @@ p.pagefind-ui__message {
   margin: 0.25em 5% !important;
   border-radius: 10px;
   max-width: none !important;
-  text-align: left;
+  text-align: left !important;
 }
 
 .common h1, .common h3, .common h4 {
