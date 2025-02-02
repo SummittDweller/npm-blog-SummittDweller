@@ -267,3 +267,7 @@ p.pagefind-ui__message {
   margin-left: 0.5em !important;
 }
 
+.page > p {
+  margin-bottom: 1em !important;
+}
+
