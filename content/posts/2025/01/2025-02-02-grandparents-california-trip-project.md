@@ -9,7 +9,7 @@ tags:
   - Rootstalk
   - travel
   - 1926
-hero_image: 
+hero_image: https://rootstalk.blob.core.windows.net/mcfate-travel-diary/United_States_System_of_Highways_Adopted_for_Uniform_Marking_by_the_American_Association_of_State_Highway_Officials.jpg
 ---
 In October 1926 my grandparents, Clarence and Miriam Abia McFate, packed their family into what I imagine was a pickup truck with a homemade camper in the bed and embarked on a trip that grandma, Miriam, described as...  
 
