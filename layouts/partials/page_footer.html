@@ -7,13 +7,13 @@
           {{ partial "bio.html" . }}
         </p>
       </div>
-      {{ if isset .Site.Params.Author "flickrid" | and ( not ( eq .Site.Params.Author.flickrid "" ) ) }}
+      {{/*  {{ if isset .Site.Params.Author "flickrid" | and ( not ( eq .Site.Params.Author.flickrid "" ) ) }}
       <div>
           <h3><a href="https://www.flickr.com/photos/{{ .Site.Params.Author.flickrid }}/">Photo Stream</a></h3>
           <div id="photos"></div>
         </div>
       </div>
-      {{ end }}
+      {{ end }}  */}}
   </div>
 
   <hr/>

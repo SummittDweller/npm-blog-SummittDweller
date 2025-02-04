@@ -66,11 +66,11 @@ menus:
       identifier: mackenzie
       url: /mackenzie-posts/
       pre: ':brain:'
-    - name: Timeline
-      weight: 60
-      identifier: timeline
-      url: /timeline/
-      pre: ':hourglass_flowing_sand:'
+    # - name: Timeline
+    #   weight: 60
+    #   identifier: timeline
+    #   url: /timeline/
+    #   pre: ':hourglass_flowing_sand:'
 
 
 markup:

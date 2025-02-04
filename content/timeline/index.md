@@ -1,6 +1,6 @@
 ---
 title: "Timeline"
-last_modified_at: 2024-12-22T15:26:26
+last_modified_at: 2025-02-03T19:37:46
 date: 2022-11-29T09:17:00-06:00
 draft: false
 
@@ -29,48 +29,48 @@ col1:
       description: A horrible day for Eastern Iowa.
       link: https://en.wikipedia.org/wiki/August_2020_Midwest_derecho
 
-col2:
-  width: 150 
-  title: Personal
-  events: 
-    - name: Added this Timeline Feature
-      to: 2022-12-02T12:47:17-06:00
-      description: See https://github.com/SummittDweller/hugo-timeline for the code.
-      link: https://github.com/SummittDweller/hugo-timeline
-    - name: First COVID-19 Vaccination
-      to: 2021-03-17
-      description: Got my first COVID-19 vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
-    - name: Second COVID-19 Vaccination
-      to: 2021-04-20
-      description: Got my second COVID-19 vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
-    - name: COVID-19 Booster Vaccination
-      to: 2021-11-05
-      description: Got my COVID-19 booster vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
-    - name: Second COVID-19 Booster Vaccination
-      to: 2022-04-04
-      description: Got another COVID-19 booster vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
-    - name: Another COVID-19 Booster Vaccination
-      to: 2022-10-05
-      description: Got another COVID-19 booster vaccination (Pfizer) from Grinnell Hy-Vee pharmacy compliments of their mobile clinic on campus at Grinnell College.
-    - name: Sully Passed
-      to: 2020-11-14
-      description: A very sad day here… Sully, our male tuxedo kitty who was only about 8 years old has passed.
-      link: /microposts/2020/11/sully-passed/
+# col2:
+#   width: 150 
+#   title: Personal
+#   events: 
+#     - name: Added this Timeline Feature
+#       to: 2022-12-02T12:47:17-06:00
+#       description: See https://github.com/SummittDweller/hugo-timeline for the code.
+#       link: https://github.com/SummittDweller/hugo-timeline
+#     - name: First COVID-19 Vaccination
+#       to: 2021-03-17
+#       description: Got my first COVID-19 vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
+#     - name: Second COVID-19 Vaccination
+#       to: 2021-04-20
+#       description: Got my second COVID-19 vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
+#     - name: COVID-19 Booster Vaccination
+#       to: 2021-11-05
+#       description: Got my COVID-19 booster vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
+#     - name: Second COVID-19 Booster Vaccination
+#       to: 2022-04-04
+#       description: Got another COVID-19 booster vaccination (Moderna) at Hy-Vee pharmacy in Toledo.
+#     - name: Another COVID-19 Booster Vaccination
+#       to: 2022-10-05
+#       description: Got another COVID-19 booster vaccination (Pfizer) from Grinnell Hy-Vee pharmacy compliments of their mobile clinic on campus at Grinnell College.
+#     - name: Sully Passed
+#       to: 2020-11-14
+#       description: A very sad day here… Sully, our male tuxedo kitty who was only about 8 years old has passed.
+#       link: /microposts/2020/11/sully-passed/
 
-col3:
-  width: 150 
-  title: Posts
-  events: 
-    - name: Norway - June 2019
-      to: 2019-06-18
-      description: My first blog post on this platform, a chronicle and photos from an epic vacation in Norway.
-      link: /posts/2019/06/norway-here-we-come/
-    - name: How MY Web Works
-      to: 2022-11-30T17:45:11-06:00
-      description: My latest post, an effort to document how MY web sites are orgianized.
-      link: /posts/2022/11/how-my-web-works/
+# col3:
+#   width: 150 
+#   title: Posts
+#   events: 
+#     - name: Norway - June 2019
+#       to: 2019-06-18
+#       description: My first blog post on this platform, a chronicle and photos from an epic vacation in Norway.
+#       link: /posts/2019/06/norway-here-we-come/
+#     - name: How MY Web Works
+#       to: 2022-11-30T17:45:11-06:00
+#       description: My latest post, an effort to document how MY web sites are orgianized.
+#       link: /posts/2022/11/how-my-web-works/
   
 
 ---
 
-{{< hugo-timeline "." >}}
+<!-- {{< hugo-timeline "." >}} -->
