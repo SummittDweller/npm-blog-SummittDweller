@@ -1,6 +1,3 @@
-{{ `<!-- hugo: layouts/shortcodes/hugo-timeline.html -->` | safeHTML }}
-{{ partial "console-log" "--- Start of hugo-timeline.html shortcode ---" }}
-
 <link rel="stylesheet" href="/css/hugo-timeline.css">
 
 {{/* ---------- Define a list of month names in reverse ---------- */}}
@@ -16,27 +13,19 @@
 {{ if $.Page.Params.minEventHeight }}
   {{ $minEventHeight = int $.Page.Params.minEventHeight }}
 {{ end }}
-{{ partial "console-log" (dict "$minEventHeight" $minEventHeight) }}
 
 {{ $heightPx := int $.Page.Params.heightPx }}
-{{ partial "console-log" (dict "$heightPx" $heightPx) }}
 
 {{ $startYear := $.Page.Params.startYear }}
 {{ $years := seq $endYear -1 $startYear }}
 {{ $numYears := len $years }}
 
-{{ partial "console-log" (dict "$startYyear" $startYear) }}
-{{ partial "console-log" (dict "$endYear" $endYear) }}
-{{ partial "console-log" (dict "$years" $years) }}
 
 {{/* ---------- Calculate pixel sizes for quantities of time, use a float to get non-rounded output from div ---------- */}}
 {{ $yearCountAsFloat := div $numYears 1.00 }}
 {{ $yearHeight := div $heightPx $yearCountAsFloat }}
 {{ $monthHeight := div $yearHeight 12.0 }}
 
-{{ partial "console-log" (dict "$yearCountAsFloat" $yearCountAsFloat) }}
-{{ partial "console-log" (dict "$yearHeight" $yearHeight) }}
-{{ partial "console-log" (dict "$monthHeight" $monthHeight) }}
 
 {{/* ---------- Calculate representations for $endYear-Dec-31 ---------- */}}
 {{/* $endYearText := printf "%d-12-31T23:59:59-06:00" $endYear */}}
@@ -45,11 +34,6 @@
 {{/* $startYearText := printf "%d-01-01T00:00:00-06:00" $startYear */}}
 {{ $startYearText := printf "%d-01-01T00:00:00" $startYear }}
 {{ $botUnix := ($startYearText | time).Unix }}
-
-{{ partial "console-log" (dict "$endYearText" $endYearText) }}
-{{ partial "console-log" (dict "$topUnix" $topUnix) }}
-{{ partial "console-log" (dict "$startYearText" $startYearText) }}
-{{ partial "console-log" (dict "$botUnix" $botUnix) }}
 
 {{/* ---------- Where the rubber meets the road ---------- */}}
 <div class="hugoTimeline">
@@ -76,7 +60,7 @@
   
     {{/* ---------- Column 1 events ---------- */}}
     {{ if $.Page.Params.col1 }}
-      <ol class="col col1" {{ if $.Page.Params.col1.width }} style="flex-basis:{{$.Page.Params.col1.width}}px" {{ end }} >
+      <ol class="col col1" {{ if $.Page.Params.col1.width }} style="flex-basis: {{$.Page.Params.col1.width}}px" {{ end }} >
         <li class="colTitle"><span>{{ $.Page.Params.col1.title }}</span></li>
         {{ range $event := sort $.Page.Params.col1.events "to" "desc" }}
           {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
@@ -86,7 +70,7 @@
     
     {{/* ---------- Column 2 events ---------- */}}
     {{ if $.Page.Params.col2 }}
-      <ol class="col col2" {{ if $.Page.Params.col2.width }} style="flex-basis:{{$.Page.Params.col2.width}}px" {{ end }} >
+      <ol class="col col2" {{ if $.Page.Params.col2.width }} style="flex-basis: {{$.Page.Params.col2.width}}px" {{ end }} >
         <li class="colTitle"><span>{{ $.Page.Params.col2.title }}</span></li>
         {{ range $event := sort $.Page.Params.col2.events "to" "desc" }}
           {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
@@ -96,7 +80,7 @@
 
     {{/* ---------- Column 3 events ---------- */}}
     {{ if $.Page.Params.col3 }}
-      <ol class="col col3" {{ if $.Page.Params.col3.width }} style="flex-basis:{{$.Page.Params.col3.width}}px" {{ end }} >
+      <ol class="col col3" {{ if $.Page.Params.col3.width }} style="flex-basis: {{$.Page.Params.col3.width}}px" {{ end }} >
         <li class="colTitle"><span>{{ $.Page.Params.col3.title }}</span></li>
         {{ range $event := sort $.Page.Params.col3.events "to" "desc" }}
           {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
@@ -106,7 +90,7 @@
     
     {{/* ---------- Column 4 events ---------- */}}
     {{ if $.Page.Params.col4 }}
-      <ol class="col col4" {{ if $.Page.Params.col4.width }} style="flex-basis:{{$.Page.Params.col4.width}}px" {{ end }} >
+      <ol class="col col4" {{ if $.Page.Params.col4.width }} style="flex-basis: {{$.Page.Params.col4.width}}px" {{ end }} >
         <li class="colTitle"><span>{{ $.Page.Params.col4.title }}</span></li>
         {{ range $event := sort $.Page.Params.col4.events "to" "desc" }}
           {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
@@ -116,7 +100,7 @@
   
     {{/* ---------- Column 5 events ---------- */}}
     {{ if $.Page.Params.col5 }}
-      <ol class="col col5" {{ if $.Page.Params.col5.width }} style="flex-basis:{{$.Page.Params.col5.width}}px" {{ end }} >
+      <ol class="col col5" {{ if $.Page.Params.col5.width }} style="flex-basis: {{$.Page.Params.col5.width}}px" {{ end }} >
         <li class="colTitle"><span>{{ $.Page.Params.col5.title }}</span></li>
         {{ range $event := sort $.Page.Params.col5.events "to" "desc" }}
           {{ partial "hugo-timeline-li-event.html" (dict "event" . "pxPerMonth" $monthHeight "topUnix" $topUnix "botUnix" $botUnix "minEventHeight" $minEventHeight) }}
@@ -126,8 +110,6 @@
   
   </div>
 </div>
-
-{{ partial "console-log" "--- End of hugo-timeline.html ---" }}
 
 {{/* Conversion from Jekyll/Liquid to Hugo 
 
@@ -169,4 +151,3 @@
   ]
 
 */}}
-{{ `<!-- /hugo: layouts/shortcodes//hugo-timeline.html -->` | safeHTML }}
