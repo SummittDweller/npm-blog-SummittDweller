@@ -1,9 +1,7 @@
 ---
 title: "Now Are We Done?"
 date: 2025-02-08T14:05:47-0600
-tags: 
-  - Drafts
-  - automation
+tags: template
 location: "Toledo, Iowa"
 coordinates: "41.98161692621105, -92.5796349564537"
 draft: false
