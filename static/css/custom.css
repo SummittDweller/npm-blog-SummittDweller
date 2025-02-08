@@ -54,6 +54,10 @@ article.onetab span.postmeta {
   color: black;
 }
 
+.micropost > p {
+  text-justify: left;
+}
+
 /* .micropost > p, .post > p, .page > p {
   color: #000000;
   font-size: 18px;
