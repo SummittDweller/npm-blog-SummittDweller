@@ -1,8 +1,0 @@
-title: "Don't Forget the Title!"
-date: [[date|%Y-%m-%dT%H:%M:%S%z]]
-tags: template
-location: "[[city]], [[state]]"
-coordinates: "[[created_latitude]], [[created_longitude]]"
-draft: false
-type: micropost
----
