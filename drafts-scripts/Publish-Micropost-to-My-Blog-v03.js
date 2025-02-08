@@ -2,6 +2,7 @@
 
   Version History:
   
+  v03 @ 8-Feb-2025 : Populates `coordinates:` frontmatter using Drafts capture variables
   v02 @ 8-Feb-2025 : Checks for a title of 5 characters or more and removes any Drafts title above the frontmatter delimiter.
   v01 @ 8-Feb-2025 : Original script w/ credientials.  Working nicely!  Just needs some 
     geo-location sense and automatic removal of Drafts title above the frontmatter delimiter.
@@ -65,6 +66,7 @@ function createDateSlug() {
   return dslug;
 }
 
+
 function getSlug(content) {
   var slug = content.match(/^slug: (.*)$/m);
   if (slug)
@@ -81,6 +83,18 @@ function getSlug(content) {
               .replace(/^-|-$/g, ''));
   return slug;
 }
+
+
+/* geolocation tips from https://forums.getdrafts.com/t/add-coordinates-when-capturing-from-apple-watch-possible-quick-capture-when-cycling-d/11302 */
+
+function putCoordinatesInFrontMatter(draft) {
+  var field = draft.content.match(/^coordinates: (.*)$/m);
+  if (!field)
+    return draft.content;
+  var newContent = draft.content.replace("created_latitude", draft.createdLatitude).replace("created_longitude", draft.createdLongitude);
+  return newContent;
+  }
+
 
 function removeDraftsTitle(text) {
   const delimiter = '---';
@@ -118,10 +132,12 @@ function urlformat(/* ...bits */) {
 
 
 
+
 /**** Logic */
 
-function main() {
-  var content = draft.content;
+function main( ) {
+
+  var content = putCoordinatesInFrontMatter(draft);
   var trimmed = removeDraftsTitle(content)
   var slug = getSlug(content);
 
@@ -157,4 +173,4 @@ function main() {
 }
 
 
-main();
+main( );
