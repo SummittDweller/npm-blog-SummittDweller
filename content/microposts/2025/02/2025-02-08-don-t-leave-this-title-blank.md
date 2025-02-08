@@ -3,7 +3,7 @@ title: "Don't leave this Title blank!"
 date: [[date|%Y-%m-%dT%H:%M:%S%z]]
 tags: template
 location: "[[city]], [[state]]"
-coordinates: "[[created_latitude]], [[created_longitude]]"
+coordinates: "41.98115600362607, -92.5794786520903"
 draft: false
 type: micropost
 ---
