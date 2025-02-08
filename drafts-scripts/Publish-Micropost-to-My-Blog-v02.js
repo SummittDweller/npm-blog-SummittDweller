@@ -1,6 +1,7 @@
 /*
 
-  This version (v02) attempts to address automatic removal of Drafts title above the frontmatter delimiter.
+  This version (v02) checks for a title of 5 characters or more and 
+  removes any Drafts title above the frontmatter delimiter.
 
   Create a .md file in Github repo
 
@@ -68,6 +69,8 @@ function getSlug(content) {
   var title = content.match(/^title: (.*)$/m);
   if (!title)
     throw 'Unknown title!';
+  if (title[1].length < 4)
+	throw 'Did you forget the title?';
   var dateSlug = createDateSlug();
   var slug = dateSlug + (title[1]
               .toLowerCase()
@@ -82,7 +85,7 @@ function removeDraftsTitle(text) {
     if (index === -1) {
       return text;
     }
-    return text.slice(index + delimiter.length).trimStart();
+    return text.slice(index).trimStart();
   }
   
 
