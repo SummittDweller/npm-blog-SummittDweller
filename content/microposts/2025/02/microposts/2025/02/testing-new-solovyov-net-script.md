@@ -1,0 +1,10 @@
+---
+title: "Testing New Solovyov.net Script"
+date: 2025-02-08 09:06 AM
+tags: template
+location: [[city]], [[state]]
+coordinates: 0.0, 0.0
+draft: false
+type: micropost
+---
+Testing the new solovyov.net Drafts script.
