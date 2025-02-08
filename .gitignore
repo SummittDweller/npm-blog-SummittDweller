@@ -4,3 +4,4 @@ public/
 .idea
 content/.posts
 static/_pagefind
+.env
