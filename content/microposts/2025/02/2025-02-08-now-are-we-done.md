@@ -8,3 +8,9 @@ draft: false
 type: micropost
 ---
 This test should return an accurate timestamp PLUS a valid "location" and "coordinates" from Drafts.
+
+Thinking ahead, the "Publish Micropost to My Blog" script needs a couple more things:
+
+  - The "title:" field should automatically populate from the Draft title (first line) and it should be in TitleCase.
+  - Coordinates in Toledo or Tama (or other frequent stops) should get location tags without having to call the `PositionStack` API.
+  
