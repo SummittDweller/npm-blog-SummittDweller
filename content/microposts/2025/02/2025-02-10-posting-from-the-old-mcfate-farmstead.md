@@ -1,5 +1,5 @@
 ---
-title: "Posting This From The Old Mcfate Farmstead"
+title: "Posting This From The Old McFate Farmstead"
 date: 2025-02-10T12:52:12-0600
 tags: 
   - Family
