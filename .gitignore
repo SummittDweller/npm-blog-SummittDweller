@@ -5,5 +5,5 @@ public/
 content/.posts
 static/_pagefind
 .env
-Drafts-Script.js
+drafts-scripts/
 
