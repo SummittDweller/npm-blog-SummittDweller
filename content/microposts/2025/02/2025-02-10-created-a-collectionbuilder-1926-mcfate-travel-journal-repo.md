@@ -2,7 +2,7 @@
 title: "Created A CollectionBuilder 1926 McFate Travel Journal Repo"
 date: 2025-02-10T22:29:34-0600
 tags: template
-location: "107 West Summit Street, Toledo, IA, USA"
+location: "Toledo, IA"
 coordinates: "41.98090980103981, -92.57941864391135"
 draft: false
 type: micropost
