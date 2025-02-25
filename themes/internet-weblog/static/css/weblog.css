@@ -125,8 +125,8 @@ nav ul > li {
   color: var(--joshin-primary-color-500);
   font-size: 18px;
   line-height: 28px;
-  margin: 0;
-  text-align: justify;
+  /* margin: 0;
+  text-align: justify; */
 }
 
 .post > p {
@@ -163,8 +163,8 @@ article.micropost {
   color: var(--joshin-primary-color-700);
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 10px;
-  text-align: justify;
+  /* margin: 0 0 10px;
+  text-align: justify; */
 }
 
 .micropost > a {
