@@ -290,3 +290,7 @@ img .hero .single {
   display: block;
   margin: auto;
 }
+
+.micropost > p, micropost > p, .post > p, .page > p {
+  text-align: left;
+}
