@@ -8,7 +8,7 @@ tags:
   - Development
   - DigitalOcean
   - Work
-hero_image: /images/Z1goLNa-photo-1587539963986-8a74135821d4.jpg
+hero_image: https://summittservices.blob.core.windows.net/summitt-dweller-blog/images/pexels-mikhail-nilov-8542562.jpg
 ---
 
 So, `node` and `npm` seem to be all the rage these days, and perhaps for good reason.  I recently fell in love with [Eleventy/11ty](https://www.11ty.dev) over [Hugo](https://gohugo.io) because it's Javascript, not Go, and it's elegantly simple with tons of flexibility.  I recently tried to add *Pagefind* search to a Hugo static web site (see [https://static.grinnell.edu/dlad-blog/posts/143-significant-rootstalk-retooling/](https://static.grinnell.edu/dlad-blog/posts/143-significant-rootstalk-retooling/)).  If *Rootstalk*, an Azure Static Web App was framed in `node.js`, as both *Eleventy* and *Pagefind* are, there would be no problem.  The Azure scripts used to deploy those frameworks are far more customizable than Hugo, and there's documentation to prove it.
