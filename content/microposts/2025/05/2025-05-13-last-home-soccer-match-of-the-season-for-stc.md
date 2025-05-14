@@ -1,5 +1,5 @@
 ---
-title: "Last Home Soccer Match Of The Season For Stc"
+title: "Last Home Soccer Match of the Season for STC"
 date: 2025-05-13T17:10:23-0500
 tags: template
 location: "Toledo, IA"

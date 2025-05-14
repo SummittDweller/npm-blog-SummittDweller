@@ -1,5 +1,5 @@
 ---
-title: "Dining At Court, Avenue Brewing Company, Before "& Juliet""
+title: "Dining At Court Avenue Brewing Company, Before '& Juliet'"
 date: 2025-05-11T11:07:29-0500
 tags: template
 location: "309 Court Avenue, Des Moines, IA, USA"
