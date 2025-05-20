@@ -1,5 +1,5 @@
 ---
-title: "Stc Girls Soccer With The Win!"
+title: "STC Girls Soccer with the Win!"
 date: 2025-05-19T18:58:31-0500
 tags: template
 location: "Toledo, IA"
