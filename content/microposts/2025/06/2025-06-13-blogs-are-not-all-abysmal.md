@@ -1,5 +1,5 @@
 ---
-title: "Blogs Are Not All Abysmal"
+title: "Not All Blogs Are Abysmal"
 date: 2025-06-13T07:17:56-0500
 tags: template
 location: "Toledo, IA"
