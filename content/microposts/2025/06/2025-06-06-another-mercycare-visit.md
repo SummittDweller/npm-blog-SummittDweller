@@ -1,5 +1,5 @@
 ---
-title: "Another Mercycare Visit"
+title: "Another MercyCare Visit"
 date: 2025-06-06T09:59:50-0500
 tags: template
 location: "Tama, IA"
