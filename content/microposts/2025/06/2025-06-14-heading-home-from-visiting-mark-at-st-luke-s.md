@@ -7,4 +7,4 @@ coordinates: "41.93680461666666, -91.66922003333332"
 draft: false
 type: micropost
 ---
-<|>
+Was in CR for some shopping (Mackenzie) and a CITO in Marion, and just left the patient's room, heading for home.  He's scheduled for surgery at 7 AM on Monday.
