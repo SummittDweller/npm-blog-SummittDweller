@@ -7,4 +7,4 @@ coordinates: "0, 0"
 draft: false
 type: micropost
 ---
-Stopped here last fall on the way to Rome, GA, and there are no new caches.  Darn.
+Stopped here last Fall on the way to Rome, GA, and there are no new caches.  Darn.

@@ -1,5 +1,5 @@
 ---
-title: "Florida Aquarium On The Tampa Bay Waterfront"
+title: "Florida Aquarium on the Tampa Bay Waterfront"
 date: 2025-06-26T12:35:27-0400
 tags: template
 location: "Cumberland Avenue, Tampa, FL, USA"

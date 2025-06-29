@@ -7,4 +7,4 @@ coordinates: "33.09319485, -86.73766986666666"
 draft: false
 type: micropost
 ---
-Alabama sucks
+Alabama sucks!

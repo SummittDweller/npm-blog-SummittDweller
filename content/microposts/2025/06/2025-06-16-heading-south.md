@@ -7,4 +7,4 @@ coordinates: "41.98107853325285, -92.57961492754238"
 draft: false
 type: micropost
 ---
-Leaving for Clarksville
+Leaving for Clarksville, TN.

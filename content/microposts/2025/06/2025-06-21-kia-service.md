@@ -7,4 +7,4 @@ coordinates: "28.24374186177319, -82.72825496507734"
 draft: false
 type: micropost
 ---
-Danna and Wayne are shopping for a new vehicle while we wait to get the Kia serviced here.
+Danna and Wayne are shopping for a new vehicle while we wait to get the Kia serviced here.  Honestly, these guys are SOOOOOOOOO busy, and SLOOOOOOW.  

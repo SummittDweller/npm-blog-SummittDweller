@@ -1,5 +1,5 @@
 ---
-title: "Lunch At Hogs Breath"
+title: "Lunch At Hog's Breath"
 date: 2025-06-24T12:26:52-0400
 tags: template
 location: "114 Duval Street, Key West, FL, USA"

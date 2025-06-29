@@ -7,4 +7,4 @@ coordinates: "25.682356683320403, -80.31425745770585"
 draft: false
 type: micropost
 ---
-We have arrived for a late lunch
+We have arrived for a late lunch.  Interesting place and menu.

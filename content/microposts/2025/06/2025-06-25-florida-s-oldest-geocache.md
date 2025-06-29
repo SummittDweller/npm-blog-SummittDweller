@@ -7,4 +7,4 @@ coordinates: "25.99830460318932, -81.6135285668664"
 draft: false
 type: micropost
 ---
-Just passed the 1 mile marker on the trail got about another three or four tents to go to Florida's oldest GCFA
+Just passed the 1-mile marker on the trail, got about another three or four tenths to go to Florida's oldest, GCFA.

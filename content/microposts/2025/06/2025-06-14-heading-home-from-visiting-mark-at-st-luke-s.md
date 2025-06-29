@@ -1,5 +1,5 @@
 ---
-title: "Heading Home From Visiting Mark At St. Luke's"
+title: "Heading Home from Visiting Mark at St. Luke's"
 date: 2025-06-14T14:45:37-0500
 tags: template
 location: "I 380 North, Cedar Rapids, IA, USA"
