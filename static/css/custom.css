@@ -293,5 +293,5 @@ img .hero .single {
 
 .micropost > p, micropost > p, .post > p, .page > p {
   text-align: left !important;
-  margin: inherit !important;
+  margin-bottom: 1em !important;
 }
