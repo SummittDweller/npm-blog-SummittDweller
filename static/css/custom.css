@@ -164,6 +164,20 @@ nav ul > li {
   font-weight: 800;
 }
 
+.micropost .micropost-meta {
+  display: block;
+  margin: 0;
+}
+
+.micropost .micropost-content {
+  margin-top: 0;
+}
+
+.micropost .micropost-content > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* .post {
   background-color: #dbe6c660;
   margin: 5px auto;
