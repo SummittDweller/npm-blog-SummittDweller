@@ -170,7 +170,7 @@ nav ul > li {
 }
 
 .micropost .micropost-content {
-  margin-top: 0;
+  margin-top: -0.25em;
 }
 
 .micropost .micropost-content > p {
@@ -266,10 +266,14 @@ p.pagefind-ui__message {
 
 .common, .micropost {
   padding: 1em 2%;
-  margin: 0.25em 5% !important;
+  margin: 0.15em 4% !important;
   border-radius: 10px;
   max-width: none !important;
   text-align: left !important;
+}
+
+.micropost {
+  padding: 0.75em 2%;
 }
 
 .common h1, .common h3, .common h4 {
