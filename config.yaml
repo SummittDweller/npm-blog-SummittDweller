@@ -1,4 +1,4 @@
-# baseURL: 'https://blog.summittdweller.com/'
+baseURL: 'https://blog.summittdweller.com/'
 # baseURL: '/'
 canonifyURLs: true
 languageCode: en-us
@@ -11,6 +11,14 @@ pagination.pagerSize: 25
 # googleAnalytics: UA-146526628-2   MAM removed 12-Mar-2023
 EnableGitInfo: false
 
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS
+
 params:
   Author:
     Handle: Summitt Dweller
@@ -22,13 +30,13 @@ params:
     Personal weblog of web professional, geocacher, camper, and volunteer, Mark
     McFate.
   ShowCopyright: true
-  # RSSEnabled: true
-  # RSSSections:
-  #   - Posts
-  #   - Microposts
-  #   - Hikes
-  #   - Photos
-  #   - Timeline
+  RSSEnabled: true
+  RSSSections:
+    - Posts
+    - Microposts
+    - Photos
+    - OneTabs
+    - Mackenzie
   # RSSMicropostTitles: false
   showGists: true
   dropboxURL: 'https://dl.dropboxusercontent.com/s/6bfw16wyq8zn8vc/javascript-test.md?dl=0'

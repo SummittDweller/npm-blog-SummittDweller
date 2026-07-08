@@ -9,13 +9,14 @@
 			<ul>
 				{{ range .Site.Menus.main }}
 				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
+					{{ .Pre | markdownify }} <a href="{{.URL}}">{{ .Name }}</a>
 					{{ if in ($.Scratch.Get "sections") .Name }}
 						<a href="{{.URL}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
 					{{ end }}
 				</li>
 				{{ end }}
 				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+				{{ if .Site.Params.rssenabled }}<li><a href="/index.xml">Subscribe</a></li>{{ end }}
 			</ul>
 		{{ else }}
 			<ul>
@@ -25,6 +26,7 @@
 				</li>
 				{{ end }}
 				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+				{{ if .Site.Params.rssenabled }}<li><a href="/index.xml">Subscribe</a></li>{{ end }}
 			</ul>
       	{{ end }}
     </div>
