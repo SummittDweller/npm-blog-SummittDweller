@@ -36,7 +36,6 @@ params:
     - Microposts
     - Photos
     - OneTabs
-    - Mackenzie
   # RSSMicropostTitles: false
   showGists: true
   dropboxURL: 'https://dl.dropboxusercontent.com/s/6bfw16wyq8zn8vc/javascript-test.md?dl=0'
@@ -69,11 +68,6 @@ menus:
       identifier: onetabs
       url: /onetabs/
       pre: ':link:'
-    - name: Mackenzie
-      weight: 55
-      identifier: mackenzie
-      url: /mackenzie-posts/
-      pre: ':brain:'
     # - name: Timeline
     #   weight: 60
     #   identifier: timeline
