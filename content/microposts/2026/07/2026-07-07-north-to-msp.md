@@ -1,5 +1,5 @@
 ---
-title: "North To Msp"
+title: "North To MSP"
 date: 2026-07-07T06:03:19-0500
 tags: template
 location: "Fly Zone, Cedar Rapids, IA, USA"

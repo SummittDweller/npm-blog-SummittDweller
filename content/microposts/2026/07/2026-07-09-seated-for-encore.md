@@ -1,5 +1,5 @@
 ---
-title: "Seated For "Encore""
+title: "Seated For 'Encore'"
 date: 2026-07-09T19:14:06-0700
 tags: template
 location: "Canada"
