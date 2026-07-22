@@ -1,5 +1,5 @@
 ---
-title: "Testing Newest Script For Github Changes"
+title: "Testing Newest Script for GitHub Changes"
 date: 2026-07-22T10:44:13-0500
 tags: template
 location: "Toledo, IA"
