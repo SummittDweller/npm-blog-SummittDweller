@@ -55,8 +55,10 @@ var BASE = 'https://api.github.com/repos';
 var http = HTTP.create();
 var credential = Credential.create('Github', 'Insert Github API token from github.com/settings/tokens' +
                                    ' (when creating new, add full repo control to allow writing to repos)');
-credential.addTextField('token', '');
-credential.authorize();
+credential.addPasswordField('token', '');
+if (!credential.authorize()) {
+  throw 'GitHub credential authorization was cancelled.';
+}
 
 var TOKEN = credential.getValue('token');
 if (!TOKEN) {

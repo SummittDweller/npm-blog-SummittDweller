@@ -2,6 +2,8 @@
 
 This blog now features search with [Pagefind](https://pagefind.app/) via [npm](https://www.npmjs.com/).  Use `npm run serve` to launch a full `localhost` test instance.  
 
+For Drafts iOS micropost script copy/install and one-time secure token setup, see [drafts-scripts/README-iOS-micropost-script.md](drafts-scripts/README-iOS-micropost-script.md).
+
 <div style="border: 3px solid red; text-align: center;">What follows is from an earlier iteration of this blog that did NOT use `Pagefind`.  Much of this information is obsolete.</div>
 
 The Python portions of this repo were gleaned from https://github.com/SummittDweller/hikes. 

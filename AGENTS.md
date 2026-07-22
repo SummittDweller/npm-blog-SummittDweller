@@ -37,6 +37,7 @@ Why `serve` is special:
 ## Notes About Docs
 - `README.md` states that much historical content is obsolete.
 - Treat npm scripts and current Hugo partials/layouts as source of truth for current behavior.
+- For iOS Drafts script install and one-time token setup, see `drafts-scripts/README-iOS-micropost-script.md`.
 
 ## AI Working Agreement For This Repo
 When making changes with AI assistance:
