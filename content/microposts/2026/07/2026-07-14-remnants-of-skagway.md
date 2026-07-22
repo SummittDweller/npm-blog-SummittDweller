@@ -8,3 +8,5 @@ draft: false
 type: micropost
 ---
 This is a reminder to myself to never order a big bowl of spicy chili when on a cruise. I didn't pick up any souvenirs in Skagway, except for this chili that seems to want to stay with me for the last two or three days.  ☹️￼
+
+Forgot to mention that Morgan did come away from Skagway with a significant something...she got engaged!

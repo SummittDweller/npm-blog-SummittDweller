@@ -7,4 +7,4 @@ coordinates: "62.55670543158043, -150.23097228999976"
 draft: false
 type: micropost
 ---
-Denali is a no-show so thus far.
+Denali, the mountain, is a no-show thus far.  But the nice lady at the gift shop still let me purchase a 30% club fridge magnet. 

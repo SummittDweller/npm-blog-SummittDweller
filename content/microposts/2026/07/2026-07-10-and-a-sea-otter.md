@@ -1,5 +1,5 @@
 ---
-title: "And A Sea Otter"
+title: "And a Sea Otter"
 date: 2026-07-10T18:53:34-0800
 tags: template
 location: "Wrangell, Alaska"

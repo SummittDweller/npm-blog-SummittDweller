@@ -1,5 +1,5 @@
 ---
-title: "Dsm Not Cid"
+title: "DSM Not CID"
 date: 2026-07-20T12:08:54-0500
 tags: template
 location: "Des Moines, Iowa"

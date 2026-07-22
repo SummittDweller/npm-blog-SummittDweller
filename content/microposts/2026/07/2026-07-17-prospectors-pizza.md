@@ -7,4 +7,4 @@ coordinates: "63.74904443964851, -148.8992469150764"
 draft: false
 type: micropost
 ---
-Watching bears catch salmon while we catch dinner.
+Watching bears (on tape) catch salmon while we catch dinner.

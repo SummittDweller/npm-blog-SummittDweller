@@ -7,4 +7,4 @@ coordinates: "62.32336103538673, -150.11402861165627"
 draft: false
 type: micropost
 ---
-At the Twister Crrek Brew Pub
+At the Twister Creek Brew Pub.  A really quaint little tourist town with mud streets and boardwalks (thankfully, because it just rained).
